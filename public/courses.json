@@ -1,0 +1,5603 @@
+[
+  {
+    "courseCode": "MSBA7001",
+    "courseTitle": "Python for Data Analytics",
+    "module": 1,
+    "courseType": "Core",
+    "streamTags": [],
+    "outlinePdfPath": "courseOutline/M1/MSBA7001-Python-for-Data-Analytics-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "exam",
+      "date": "2026-10-16",
+      "startTime": "09:30",
+      "endTime": "12:30",
+      "venue": "LT104, Classroom ABC, EFG, H, J",
+      "raw": "Oct 16, 2026 (Fri), 09:30-12:30, LT104, Classroom ABC, EFG, H, J"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Chao DING"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Wednesday & Saturday 9:30-12:30",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M1/MSBA7001-Python-for-Data-Analytics-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-09-05",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-09",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-12",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-16",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-19",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-23",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-30",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-03",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-07",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-10",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      },
+      {
+        "sectionId": "B",
+        "instructors": [
+          {
+            "name": "Prof. Chao DING"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Wednesday & Saturday 14:00-17:00",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M1/MSBA7001-Python-for-Data-Analytics-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-09-05",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-09",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-12",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-16",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-19",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-23",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-30",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-03",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-07",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-10",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      },
+      {
+        "sectionId": "C",
+        "instructors": [
+          {
+            "name": "Prof. Chao DING"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Monday & Thursday 9:30-12:30",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": "courseOutline/M1/MSBA7001-Python-for-Data-Analytics-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-09-07",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-10",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-14",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-17",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-21",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-24",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-28",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-05",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-08",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-12",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      },
+      {
+        "sectionId": "D",
+        "instructors": [
+          {
+            "name": "Prof. Chao DING"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Monday & Thursday 14:00-17:00",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": "courseOutline/M1/MSBA7001-Python-for-Data-Analytics-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-09-07",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-10",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-14",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-17",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-21",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-24",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-28",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-05",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-08",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-12",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7003",
+    "courseTitle": "Decision Analytics",
+    "module": 1,
+    "courseType": "Core",
+    "streamTags": [],
+    "outlinePdfPath": null,
+    "examOrFinal": {
+      "kind": "exam",
+      "date": "2026-10-20",
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "venue": "LT104, Classroom ABC, EFG, H, J",
+      "raw": "Oct 20, 2026 (Tue), 14:00-17:00, LT104, Classroom ABC, EFG, H, J"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Wei ZHANG"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Tuesday & Friday 9:30-12:30",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": "courseOutline/M1/MSBA7003-Decision-Analytics_Class-A-and-B-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-09-08",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-11",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-12",
+            "startTime": "20:00",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-09-15",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-18",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-22",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-23",
+            "startTime": "20:00",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-09-29",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-02",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-03",
+            "startTime": "20:00",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-10-06",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-09",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-13",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-13",
+            "startTime": "20:00",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          }
+        ]
+      },
+      {
+        "sectionId": "B",
+        "instructors": [
+          {
+            "name": "Prof. Wei ZHANG"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Tuesday & Friday 14:00-17:00",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": "courseOutline/M1/MSBA7003-Decision-Analytics_Class-A-and-B-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-09-08",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom J",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-11",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom J",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-12",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-09-15",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom J",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-18",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom J",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-22",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom J",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-23",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-09-29",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom J",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-02",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom J",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-03",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-10-06",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom J",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-09",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom J",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-13",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom J",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-13",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          }
+        ]
+      },
+      {
+        "sectionId": "C",
+        "instructors": [
+          {
+            "name": "Prof. Xing HU"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Tuesday & Friday 9:30-12:30",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": "courseOutline/M1/MSBA7003-Decision-Analytics_Class-C-and-D-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-09-08",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-11",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "A205-01&02",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-12",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-09-15",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-18",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "A205-01&02",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-22",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-23",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-09-29",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-02",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-03",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-10-06",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-09",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-13",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-13",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "LTA",
+            "sessionType": "tutorial"
+          }
+        ]
+      },
+      {
+        "sectionId": "D",
+        "instructors": [
+          {
+            "name": "Prof. Xing HU"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Tuesday & Friday 14:00-17:00",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": "courseOutline/M1/MSBA7003-Decision-Analytics_Class-C-and-D-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-09-08",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-11",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-12",
+            "startTime": "20:00",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-09-15",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-18",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "A205-01&02",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-22",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-09-23",
+            "startTime": "20:00",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-09-29",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-02",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-03",
+            "startTime": "20:00",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-10-06",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-09",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-13",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-10-13",
+            "startTime": "20:00",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "tutorial"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7002",
+    "courseTitle": "Business Statistics",
+    "module": 2,
+    "courseType": "Core",
+    "streamTags": [],
+    "outlinePdfPath": "courseOutline/M2/MSBA7002-Business-Statistics-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "exam",
+      "date": "2026-11-28",
+      "startTime": "09:30",
+      "endTime": "12:30",
+      "venue": "LT104, Classroom ABC, D, EFG, J",
+      "raw": "Nov 28, 2026 (Sat), 09:30-12:30, LT104, Classroom ABC, D, EFG, J"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Zhanrui CAI",
+            "note": "First 5 lectures"
+          },
+          {
+            "name": "Prof. Weichen WANG",
+            "note": "Last 5 lectures"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Monday & Thursday 9:30-12:30",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": "courseOutline/M2/MSBA7002-Business-Statistics-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-10-22",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-10-26",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-10-29",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-10-30",
+            "startTime": "18:00",
+            "endTime": "20:00",
+            "venue": "Classroom ABC",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-02",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-11-06",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "MC-LE6",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-11-09",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-10",
+            "startTime": "18:00",
+            "endTime": "20:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-13",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-16",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-18",
+            "startTime": "17:30",
+            "endTime": "19:30",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-19",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-23",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-25",
+            "startTime": "18:00",
+            "endTime": "20:00",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          }
+        ]
+      },
+      {
+        "sectionId": "B",
+        "instructors": [
+          {
+            "name": "Prof. Zhanrui CAI",
+            "note": "First 5 lectures"
+          },
+          {
+            "name": "Prof. Weichen WANG",
+            "note": "Last 5 lectures"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Monday & Thursday 14:00-17:00",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": "courseOutline/M2/MSBA7002-Business-Statistics-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-10-22",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-10-26",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-10-29",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-10-30",
+            "startTime": "18:00",
+            "endTime": "20:00",
+            "venue": "Classroom ABC",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-01",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-11-01",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-11-05",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-09",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-10",
+            "startTime": "18:00",
+            "endTime": "20:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-16",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-18",
+            "startTime": "17:30",
+            "endTime": "19:30",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-19",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-23",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-25",
+            "startTime": "18:00",
+            "endTime": "20:00",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          }
+        ]
+      },
+      {
+        "sectionId": "C",
+        "instructors": [
+          {
+            "name": "Prof. Zhanrui CAI",
+            "note": "First 5 lectures"
+          },
+          {
+            "name": "Prof. Weichen WANG",
+            "note": "Last 5 lectures"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Wednesday & Saturday 9:30-12:30",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M2/MSBA7002-Business-Statistics-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-10-24",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-10-28",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-10-31",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-11-01",
+            "startTime": "18:00",
+            "endTime": "20:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-04",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-11-07",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "MC-KKLG109",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-11-11",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-12",
+            "startTime": "18:00",
+            "endTime": "20:00",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-14",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "MC-KKLG109",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-18",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-18",
+            "startTime": "19:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-21",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-25",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "MC-KKLG109",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-26",
+            "startTime": "12:30",
+            "endTime": "14:30",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          }
+        ]
+      },
+      {
+        "sectionId": "D",
+        "instructors": [
+          {
+            "name": "Prof. Zhanrui CAI",
+            "note": "First 5 lectures"
+          },
+          {
+            "name": "Prof. Weichen WANG",
+            "note": "Last 5 lectures"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Wednesday & Saturday 14:00-17:00",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M2/MSBA7002-Business-Statistics-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-10-24",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-10-28",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-10-31",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-11-01",
+            "startTime": "18:00",
+            "endTime": "20:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-04",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-11-07",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "MC-MB201",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Zhanrui CAI"
+            ]
+          },
+          {
+            "date": "2026-11-11",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-12",
+            "startTime": "18:00",
+            "endTime": "20:00",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-14",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "MC-MB201",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-18",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-18",
+            "startTime": "19:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-21",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-25",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "MC-MB237",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Weichen WANG"
+            ]
+          },
+          {
+            "date": "2026-11-26",
+            "startTime": "12:30",
+            "endTime": "14:30",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7004",
+    "courseTitle": "Operations Analytics",
+    "module": 2,
+    "courseType": "Core",
+    "streamTags": [],
+    "outlinePdfPath": "courseOutline/M2/MSBA7004_Operations-Analytics-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "exam",
+      "date": "2026-11-30",
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "venue": "LT104, LTA, Classroom ABC, EFG, J, A205-1&2",
+      "raw": "Nov 30, 2026 (Mon), 14:00-17:00, LT104, LTA, Classroom ABC, EFG, J, A205-1&2"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Huiyin OUYANG",
+            "note": "First 5 lectures"
+          },
+          {
+            "name": "Prof. Lin CHEN",
+            "note": "Last 5 lectures"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Monday & Thursday 9:30-12:30",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": "courseOutline/M2/MSBA7004_Operations-Analytics-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-10-22",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom J",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-10-26",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-10-29",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-11-02",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-11-02",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-05",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-11-09",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-11",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-12",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-16",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-19",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-16",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-23",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-26",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          }
+        ]
+      },
+      {
+        "sectionId": "B",
+        "instructors": [
+          {
+            "name": "Prof. Huiyin OUYANG",
+            "note": "First 5 lectures"
+          },
+          {
+            "name": "Prof. Lin CHEN",
+            "note": "Last 5 lectures"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Monday & Thursday 14:00-17:00",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": "courseOutline/M2/MSBA7004_Operations-Analytics-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-10-22",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "A205-01&02",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-10-26",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "A205-01&02",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-10-29",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "A205-01&02",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-11-02",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "A205-01&02",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-11-02",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-05",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "A205-01&02",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-11-09",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "A205-01&02",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-11",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-12",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "A205-01&02",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-16",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "A205-01&02",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-19",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "A205-01&02",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-16",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-23",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "A205-01&02",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-26",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          }
+        ]
+      },
+      {
+        "sectionId": "C",
+        "instructors": [
+          {
+            "name": "Prof. Huiyin OUYANG",
+            "note": "First 5 lectures"
+          },
+          {
+            "name": "Prof. Lin CHEN",
+            "note": "Last 5 lectures"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Wednesday & Saturday 9:30-12:30",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M2/MSBA7004_Operations-Analytics-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-10-24",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-10-28",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-10-31",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-10-31",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-04",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-11-07",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom EFG",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-11-10",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-11",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-14",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom EFG",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-18",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-20",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-21",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-25",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-27",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          }
+        ]
+      },
+      {
+        "sectionId": "D",
+        "instructors": [
+          {
+            "name": "Prof. Huiyin OUYANG",
+            "note": "First 5 lectures"
+          },
+          {
+            "name": "Prof. Lin CHEN",
+            "note": "Last 5 lectures"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Wednesday & Saturday 14:00-17:00",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M2/MSBA7004_Operations-Analytics-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-10-24",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-10-28",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-10-31",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-10-31",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-04",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-11-07",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Huiyin OUYANG"
+            ]
+          },
+          {
+            "date": "2026-11-10",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-11",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-14",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-18",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-20",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-11-21",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom H",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-25",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture",
+            "instructors": [
+              "Prof. Lin CHEN"
+            ]
+          },
+          {
+            "date": "2026-11-27",
+            "startTime": "18:30",
+            "endTime": "21:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7013",
+    "courseTitle": "Forecasting and Predictive Analytics",
+    "module": 3,
+    "courseType": "Elective",
+    "streamTags": [
+      "AI-M"
+    ],
+    "outlinePdfPath": null,
+    "examOrFinal": null,
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Xinghao QIAO"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Monday & Thursday 9:30-12:30",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": null,
+        "meetings": [
+          {
+            "date": "2026-12-03",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-07",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-09",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTB",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-12",
+            "startTime": "18:30",
+            "endTime": "19:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-12-14",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-16",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTB",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-19",
+            "startTime": "18:30",
+            "endTime": "19:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-12-21",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-04",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-04",
+            "startTime": "18:30",
+            "endTime": "19:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-01-07",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-07",
+            "startTime": "18:30",
+            "endTime": "19:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-01-11",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-14",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-16",
+            "startTime": "18:30",
+            "endTime": "19:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7014",
+    "courseTitle": "Business Simulation",
+    "module": 3,
+    "courseType": "Elective",
+    "streamTags": [
+      "MC-AM"
+    ],
+    "outlinePdfPath": "courseOutline/M3/MSBA7014-Business-Simulation-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "presentation",
+      "date": "2027-01-16",
+      "startTime": "18:30",
+      "endTime": "21:30",
+      "venue": "LT104",
+      "raw": "Final Presentation: Jan 16, 2027 (Sat), 18:30-21:30, LT104"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Sundara Natarajan PANCHANATHAM"
+          }
+        ],
+        "timeBucket": "NT",
+        "dayPattern": "Wednesday & Saturday 18:30-21:30",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M3/MSBA7014-Business-Simulation-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-12-02",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-05",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-09",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-12",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-16",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-19",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-02",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-06",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-09",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-13",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7017",
+    "courseTitle": "Financial Engineering",
+    "module": 3,
+    "courseType": "Elective",
+    "streamTags": [
+      "MC-DE"
+    ],
+    "outlinePdfPath": "courseOutline/M3/MSBA7017-Financial-Engineering-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "exam",
+      "date": "2027-01-18",
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "venue": "Classroom D, J",
+      "raw": "Final Exam: Jan 18, 2027 (Mon), 14:00-17:00, Classroom D, J"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Liao WANG"
+          }
+        ],
+        "timeBucket": "NT",
+        "dayPattern": "Monday & Thursday 18:30-21:30",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": "courseOutline/M3/MSBA7017-Financial-Engineering-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-12-03",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-07",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-08",
+            "startTime": "09:30",
+            "endTime": "10:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-12-10",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-14",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-15",
+            "startTime": "09:30",
+            "endTime": "10:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-12-17",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-21",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-04",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-07",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-08",
+            "startTime": "09:30",
+            "endTime": "10:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-01-11",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-14",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-16",
+            "startTime": "18:30",
+            "endTime": "19:30",
+            "venue": "LTA",
+            "sessionType": "tutorial"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7023",
+    "courseTitle": "Geospatial and Business Analytics",
+    "module": 3,
+    "courseType": "Elective",
+    "streamTags": [
+      "MC-AM"
+    ],
+    "outlinePdfPath": "courseOutline/M3/MSBA7023-Geospatial-and-Business-Analytics-(2026-27).pdf",
+    "examOrFinal": null,
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Zhixi WAN"
+          }
+        ],
+        "timeBucket": "NT",
+        "dayPattern": "Tuesday & Friday 18:30-21:30",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": "courseOutline/M3/MSBA7023-Geospatial-and-Business-Analytics-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-12-01",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-04",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-08",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-11",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-15",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-18",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-05",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-08",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-12",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-15",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7024",
+    "courseTitle": "Database Design and Management",
+    "module": 3,
+    "courseType": "Elective",
+    "streamTags": [
+      "MC-AM"
+    ],
+    "outlinePdfPath": "courseOutline/M3/MSBA7024-Database-Design-and-Management-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "exam",
+      "date": "2027-01-20",
+      "startTime": "09:30",
+      "endTime": "12:30",
+      "venue": "LT104, Classroom ABC, D, J",
+      "raw": "Final Exam: Jan 20, 2027 (Wed), 09:30-12:30, LT104, Classroom ABC, D, J"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Michael CHAU"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Monday & Thursday 9:30-12:30",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": "courseOutline/M3/MSBA7024-Database-Design-and-Management-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-12-02",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom D",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-03",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-07",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-09",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-04",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-06",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-07",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-11",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-13",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTB",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-14",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      },
+      {
+        "sectionId": "B",
+        "instructors": [
+          {
+            "name": "Prof. Michael CHAU"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Monday & Thursday 14:00-17:00",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": "courseOutline/M3/MSBA7024-Database-Design-and-Management-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-12-02",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom D",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-03",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-07",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-09",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-04",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-06",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-07",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-11",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-13",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "Classroom D",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-14",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      },
+      {
+        "sectionId": "C",
+        "instructors": [
+          {
+            "name": "Prof. Michael CHAU"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Tuesday & Friday 14:00-17:00",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": "courseOutline/M3/MSBA7024-Database-Design-and-Management-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-12-01",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-01",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTB",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-04",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-08",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-08",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTB",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-05",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-05",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTB",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-08",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-12",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-15",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7027",
+    "courseTitle": "Machine Learning",
+    "module": 3,
+    "courseType": "Elective",
+    "streamTags": [
+      "AI-M",
+      "MC-AM"
+    ],
+    "outlinePdfPath": "courseOutline/M3/MSBA7027_Machine-Learning-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "exam",
+      "date": "2027-01-19",
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "venue": "Classroom ABC, D, EFG, A205-1&2",
+      "raw": "Final Exam: Jan 19, 2027 (Tue), 14:00-17:00, Classroom ABC, D, EFG, A205-1&2"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Zhengli WANG"
+          }
+        ],
+        "timeBucket": "NT",
+        "dayPattern": "Monday & Thursday 18:30-21:30",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": "courseOutline/M3/MSBA7027_Machine-Learning-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-12-03",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-06",
+            "startTime": "18:30",
+            "endTime": "20:30",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-12-07",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-10",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-14",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-15",
+            "startTime": "18:30",
+            "endTime": "20:30",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-12-17",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-21",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-04",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-07",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-08",
+            "startTime": "10:30",
+            "endTime": "12:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-01-11",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-14",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom H",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-16",
+            "startTime": "18:30",
+            "endTime": "20:30",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          }
+        ]
+      },
+      {
+        "sectionId": "B",
+        "instructors": [
+          {
+            "name": "Prof. Zhengli WANG"
+          }
+        ],
+        "timeBucket": "NT",
+        "dayPattern": "Wednesday & Saturday 18:30-21:30",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M3/MSBA7027_Machine-Learning-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-12-02",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-05",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-06",
+            "startTime": "18:30",
+            "endTime": "20:30",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-12-09",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-12",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-15",
+            "startTime": "18:30",
+            "endTime": "20:30",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-12-16",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-19",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-02",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-06",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-08",
+            "startTime": "10:30",
+            "endTime": "12:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-01-09",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-13",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-16",
+            "startTime": "18:30",
+            "endTime": "20:30",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          }
+        ]
+      },
+      {
+        "sectionId": "C",
+        "instructors": [
+          {
+            "name": "Prof. Zhengli WANG"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Wednesday & Saturday 14:00-17:00",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M3/MSBA7027_Machine-Learning-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-12-02",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-05",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-06",
+            "startTime": "18:30",
+            "endTime": "20:30",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-12-09",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-12",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-15",
+            "startTime": "18:30",
+            "endTime": "20:30",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2026-12-16",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-19",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-02",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-06",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-08",
+            "startTime": "10:30",
+            "endTime": "12:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-01-09",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-13",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-16",
+            "startTime": "18:30",
+            "endTime": "20:30",
+            "venue": "Classroom H",
+            "sessionType": "tutorial"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7030",
+    "courseTitle": "Digital Innovation",
+    "module": 3,
+    "courseType": "Elective",
+    "streamTags": [
+      "MC-DE"
+    ],
+    "outlinePdfPath": "courseOutline/M3/MSBA7030_Digital-Innovation-(2026-27).pdf",
+    "examOrFinal": null,
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Zhenhui Jack JIANG"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Tuesday & Friday 9:30-12:30",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": "courseOutline/M3/MSBA7030_Digital-Innovation-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-12-01",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-02",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTB",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-03",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom D",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-04",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-06",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-07",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTB",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-08",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-09",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom D",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-11",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-19",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTB",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7033",
+    "courseTitle": "Generative Artificial Intelligence",
+    "module": 3,
+    "courseType": "Elective",
+    "streamTags": [
+      "AI-A"
+    ],
+    "outlinePdfPath": "courseOutline/M3/MSBA7033_Generative-Artificial-Intelligence-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "exam",
+      "date": "2027-01-17",
+      "startTime": "18:30",
+      "endTime": "21:30",
+      "venue": "Classroom ABC, D, A205-1&2",
+      "raw": "Final Exam: Jan 17, 2027 (Sun), 18:30-21:30, Classroom ABC, D, A205-1&2"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Yifan YU"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Tuesday & Friday 9:30-12:30",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": "courseOutline/M3/MSBA7033_Generative-Artificial-Intelligence-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-12-01",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-04",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-08",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-11",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTB",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-15",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-18",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTB",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-05",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-08",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-12",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-15",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          }
+        ]
+      },
+      {
+        "sectionId": "B",
+        "instructors": [
+          {
+            "name": "Prof. Yifan YU"
+          }
+        ],
+        "timeBucket": "NT",
+        "dayPattern": "Wednesday & Saturday 18:30-21:30",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M3/MSBA7033_Generative-Artificial-Intelligence-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2026-12-02",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-05",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-09",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-12",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-16",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2026-12-19",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-02",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-06",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-09",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-13",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7012",
+    "courseTitle": "Social Media and Digital Marketing Analytics",
+    "module": 4,
+    "courseType": "Elective",
+    "streamTags": [
+      "MC-DE"
+    ],
+    "outlinePdfPath": "courseOutline/M4/MSBA7012_Social-Media-and-Digital-Marketing-Analytics-2026-27.pdf",
+    "examOrFinal": {
+      "kind": "presentation",
+      "date": "2027-03-08",
+      "startTime": "09:30",
+      "endTime": "12:30",
+      "venue": "LTA",
+      "raw": "Final Presentation: Mar 8, 2027 (Mon), 09:30-12:30, LTA"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Hailiang CHEN"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Monday & Thursday 9:30-12:30",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": "courseOutline/M4/MSBA7012_Social-Media-and-Digital-Marketing-Analytics-2026-27.pdf",
+        "meetings": [
+          {
+            "date": "2027-01-25",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-28",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-01",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-11",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-15",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-16",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-02-18",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-22",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-25",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-01",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-02",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-03-04",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7013",
+    "courseTitle": "Forecasting and Predictive Analytics",
+    "module": 4,
+    "courseType": "Elective",
+    "streamTags": [
+      "AI-M"
+    ],
+    "outlinePdfPath": null,
+    "examOrFinal": null,
+    "sections": [
+      {
+        "sectionId": "B",
+        "instructors": [
+          {
+            "name": "Prof. Xinghao QIAO"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Tuesday & Friday 9:30-12:30",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": null,
+        "meetings": [
+          {
+            "date": "2027-01-22",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-26",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-29",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-30",
+            "startTime": "18:30",
+            "endTime": "19:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-02-02",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-12",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-12",
+            "startTime": "18:30",
+            "endTime": "19:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-02-16",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-19",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-23",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-24",
+            "startTime": "18:30",
+            "endTime": "19:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-02-26",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-27",
+            "startTime": "18:30",
+            "endTime": "19:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-03-02",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-02",
+            "startTime": "18:30",
+            "endTime": "19:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7021",
+    "courseTitle": "Optimization and Reinforcement Learning",
+    "module": 4,
+    "courseType": "Elective",
+    "streamTags": [
+      "AI-M"
+    ],
+    "outlinePdfPath": "courseOutline/M4/MSBA7021-Optimization-and-Reinforcement-Learning-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "presentation",
+      "date": "2027-03-06",
+      "startTime": "18:30",
+      "endTime": "21:30",
+      "venue": "LT104",
+      "raw": "Final Presentation: Mar 6, 2027 (Sat), 18:30-21:30, LT104"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Wei ZHANG"
+          }
+        ],
+        "timeBucket": "NT",
+        "dayPattern": "Wednesday & Saturday 18:30-21:30",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M4/MSBA7021-Optimization-and-Reinforcement-Learning-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2027-01-23",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-27",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-30",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-03",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-11",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-02-13",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-17",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-20",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-24",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-27",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-03",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-04",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7025",
+    "courseTitle": "Digital Experimentation Methods",
+    "module": 4,
+    "courseType": "Elective",
+    "streamTags": [
+      "MC-AM"
+    ],
+    "outlinePdfPath": "courseOutline/M5/MSBA7025-Digital-Experimentation-Methods-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "presentation",
+      "date": "2027-03-10",
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "venue": "LT104",
+      "raw": "Final Presentation: Mar 10, 2027 (Wed), 14:00-17:00, LT104"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Jing OUYANG"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Wednesday & Saturday 14:00-17:00",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M5/MSBA7025-Digital-Experimentation-Methods-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2027-01-23",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-27",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-30",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-03",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-13",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-17",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-20",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-24",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-27",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-03",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7026",
+    "courseTitle": "Big Data Analytics on the Cloud",
+    "module": 4,
+    "courseType": "Elective",
+    "streamTags": [
+      "AI-A"
+    ],
+    "outlinePdfPath": null,
+    "examOrFinal": null,
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Zhepeng LI"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Tuesday & Friday 14:00-17:00",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": null,
+        "meetings": [
+          {
+            "date": "2027-01-22",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-26",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-27",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-01-29",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-02",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-02",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-02-12",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-16",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-16",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-02-19",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-23",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-26",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-28",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-03-02",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      },
+      {
+        "sectionId": "B",
+        "instructors": [
+          {
+            "name": "Prof. Zhepeng LI"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Tuesday & Friday 9:30-12:30",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": null,
+        "meetings": [
+          {
+            "date": "2027-01-22",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-26",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-27",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-01-29",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-02",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-02",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-02-12",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-16",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-16",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-02-19",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-23",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-26",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-28",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "venue": "LT104",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-03-02",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7028",
+    "courseTitle": "Deep Learning",
+    "module": 4,
+    "courseType": "Elective",
+    "streamTags": [
+      "AI-M"
+    ],
+    "outlinePdfPath": "courseOutline/M4/MSBA7028-Deep_Learning-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "presentation",
+      "date": "2027-03-09",
+      "startTime": "18:30",
+      "endTime": "21:30",
+      "venue": "LTA",
+      "raw": "Final Presentation: Mar 9, 2027 (Tue), 18:30-21:30, LTA"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Xiao LEI"
+          }
+        ],
+        "timeBucket": "NT",
+        "dayPattern": "Tuesday & Friday 18:30-21:30",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": "courseOutline/M4/MSBA7028-Deep_Learning-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2027-01-22",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-26",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-29",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-02",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-02",
+            "startTime": "18:30",
+            "endTime": "20:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-02-12",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-16",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-19",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-19",
+            "startTime": "18:30",
+            "endTime": "20:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-02-23",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-26",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-02",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-05",
+            "startTime": "18:30",
+            "endTime": "20:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7029",
+    "courseTitle": "Storytelling with Data",
+    "module": 4,
+    "courseType": "Elective",
+    "streamTags": [
+      "MC-AM"
+    ],
+    "outlinePdfPath": "courseOutline/M4/MSBA7029-Storytelling-with-data_Class-A-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "presentation",
+      "date": "2027-03-08",
+      "startTime": "18:30",
+      "endTime": "21:30",
+      "venue": "LTA",
+      "raw": "Final Presentation: Mar 8, 2027 (Mon), 18:30-21:30, LTA"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Xin TONG"
+          }
+        ],
+        "timeBucket": "NT",
+        "dayPattern": "Monday & Thursday 18:30-21:30",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": "courseOutline/M4/MSBA7029-Storytelling-with-data_Class-A-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2027-01-25",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-28",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-01",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-11",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-15",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-18",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-22",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-25",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-01",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-04",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom ABC",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7035",
+    "courseTitle": "Applied Large Language Models",
+    "module": 4,
+    "courseType": "Elective",
+    "streamTags": [
+      "AI-A"
+    ],
+    "outlinePdfPath": null,
+    "examOrFinal": {
+      "kind": "presentation",
+      "date": "2027-03-08",
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "venue": "LTA",
+      "raw": "Final Presentation: Mar 8, 2027 (Mon), 14:00-17:00, LTA"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Hailiang CHEN"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Monday & Thursday 14:00-17:00",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": null,
+        "meetings": [
+          {
+            "date": "2027-01-25",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-28",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-29",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-02-01",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-11",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-15",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-16",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LTB",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-02-18",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-22",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-25",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-01",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-04",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LTA",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7036",
+    "courseTitle": "Ethics in Artificial Intelligence",
+    "module": 4,
+    "courseType": "Elective",
+    "streamTags": [
+      "AI-A"
+    ],
+    "outlinePdfPath": null,
+    "examOrFinal": null,
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Rachel STERKEN"
+          },
+          {
+            "name": "Prof. Boris BABIC"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Monday & Thursday 14:00-17:00",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": null,
+        "meetings": [
+          {
+            "date": "2027-01-25",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-28",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-01",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-11",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-15",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-18",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-22",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-25",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-01",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-04",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7040",
+    "courseTitle": "Sports Analytics",
+    "module": 4,
+    "courseType": "Elective",
+    "streamTags": [],
+    "outlinePdfPath": null,
+    "examOrFinal": {
+      "kind": "presentation",
+      "date": "2027-03-09",
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "venue": "Classroom H",
+      "raw": "Final Presentation: Mar 9, 2027 (Tue), 14:00-17:00, Classroom H"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Minje PARK"
+          }
+        ],
+        "timeBucket": "NT",
+        "dayPattern": "Tuesday & Friday 18:30-21:30",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": null,
+        "meetings": [
+          {
+            "date": "2027-01-22",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-26",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-29",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-02",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-12",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-16",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-19",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-23",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-26",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-02",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7041",
+    "courseTitle": "Artificial Intelligence Generated Content in Business",
+    "module": 4,
+    "courseType": "Elective",
+    "streamTags": [],
+    "outlinePdfPath": "courseOutline/M4/MSBA7041-Artificial-Intelligence-Generated-Content-in-Business-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "midterm",
+      "date": null,
+      "startTime": null,
+      "endTime": null,
+      "venue": null,
+      "raw": "Mid-term Examination"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Dawei WANG"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Wednesday & Saturday 9:30-12:30",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M4/MSBA7041-Artificial-Intelligence-Generated-Content-in-Business-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2027-01-23",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-27",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-01-30",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-03",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-13",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-17",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-20",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-24",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-02-27",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-03",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7005",
+    "courseTitle": "Business Analytics Capstone",
+    "module": 5,
+    "courseType": "Capstone",
+    "streamTags": [],
+    "outlinePdfPath": "courseOutline/M5/MSBA7005-Business-Analytics-Capstone-(2026-27).pdf",
+    "examOrFinal": null,
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Zhenhui Jack JIANG"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Tuesday & Friday 9:30-12:30",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": "courseOutline/M5/MSBA7005-Business-Analytics-Capstone-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2027-03-19",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-23",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-30",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-02",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-06",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-09",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-13",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-16",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-20",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-28",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7015",
+    "courseTitle": "Service Operations Management",
+    "module": 5,
+    "courseType": "Elective",
+    "streamTags": [
+      "MC-AM"
+    ],
+    "outlinePdfPath": "courseOutline/M5/MSBA7015_Service-Operations-Management-(2026-27).pdf",
+    "examOrFinal": null,
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Huiyin OUYANG"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Saturday & Sunday 9:30-18:00 (incl. 1 hr lunch break)",
+        "meetingDays": [
+          0,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M5/MSBA7015_Service-Operations-Management-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2027-04-10",
+            "startTime": "09:30",
+            "endTime": "18:00",
+            "venue": "HKU Shenzhen",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-11",
+            "startTime": "09:30",
+            "endTime": "18:00",
+            "venue": "HKU Shenzhen",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-17",
+            "startTime": "09:30",
+            "endTime": "18:00",
+            "venue": "HKU Shenzhen",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-18",
+            "startTime": "09:30",
+            "endTime": "18:00",
+            "venue": "HKU Shenzhen",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7016",
+    "courseTitle": "Supply Chain and Logistics Management",
+    "module": 5,
+    "courseType": "Elective",
+    "streamTags": [
+      "MC-DE"
+    ],
+    "outlinePdfPath": "courseOutline/M5/MSBA7016-Supply-Chain-and-Logistics-Management-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "presentation",
+      "date": "2027-04-27",
+      "startTime": "18:30",
+      "endTime": "21:30",
+      "venue": "LT104",
+      "raw": "Final Presentation: Apr 27, 2027 (Tue), 18:30-21:30, LT104"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Benjamin YEN"
+          }
+        ],
+        "timeBucket": "NT",
+        "dayPattern": "Tuesday & Friday 18:30-21:30",
+        "meetingDays": [
+          2,
+          5
+        ],
+        "outlinePdfPath": "courseOutline/M5/MSBA7016-Supply-Chain-and-Logistics-Management-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2027-03-19",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-23",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-30",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-02",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-06",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-09",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-13",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-16",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-20",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-23",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7020",
+    "courseTitle": "Accounting Analytics for Managerial Decisions",
+    "module": 5,
+    "courseType": "Elective",
+    "streamTags": [],
+    "outlinePdfPath": "courseOutline/M5/MSBA7020-Accounting-Analytics-for-Managerial-Decisions-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "exam",
+      "date": "2027-05-02",
+      "startTime": "09:30",
+      "endTime": "12:30",
+      "venue": "Classroom ABC, D",
+      "raw": "Final Exam: May 2, 2027 (Sun), 09:30-12:30, Classroom ABC, D"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Xin WANG"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Sunday 9:30-17:00",
+        "meetingDays": [
+          0
+        ],
+        "outlinePdfPath": "courseOutline/M5/MSBA7020-Accounting-Analytics-for-Managerial-Decisions-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2027-03-21",
+            "startTime": "09:30",
+            "endTime": "17:00",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-04",
+            "startTime": "09:30",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-11",
+            "startTime": "09:30",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-18",
+            "startTime": "09:30",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-25",
+            "startTime": "09:30",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7025",
+    "courseTitle": "Digital Experimentation Methods",
+    "module": 5,
+    "courseType": "Elective",
+    "streamTags": [
+      "MC-AM"
+    ],
+    "outlinePdfPath": "courseOutline/M5/MSBA7025-Digital-Experimentation-Methods-(2026-27).pdf",
+    "examOrFinal": null,
+    "sections": [
+      {
+        "sectionId": "B",
+        "instructors": [
+          {
+            "name": "Prof. Jing OUYANG"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Wednesday & Saturday 9:30-12:30",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M5/MSBA7025-Digital-Experimentation-Methods-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2027-03-20",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "Classroom D",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-24",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-31",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-03",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-07",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-10",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-14",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-17",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-21",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-24",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ],
+        "examOrFinal": {
+          "kind": "presentation",
+          "date": "2027-04-30",
+          "startTime": "09:30",
+          "endTime": "12:30",
+          "venue": "LT104",
+          "raw": "Final Presentation: Apr 30, 2027 (Fri), 09:30-12:30, LT104"
+        }
+      },
+      {
+        "sectionId": "C",
+        "instructors": [
+          {
+            "name": "Prof. Jing OUYANG"
+          }
+        ],
+        "timeBucket": "PM",
+        "dayPattern": "Wednesday & Saturday 14:00-17:00",
+        "meetingDays": [
+          3,
+          6
+        ],
+        "outlinePdfPath": "courseOutline/M5/MSBA7025-Digital-Experimentation-Methods-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2027-03-20",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "TC-B2",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-24",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-31",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-03",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-07",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-10",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-14",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-17",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-21",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-24",
+            "startTime": "14:00",
+            "endTime": "17:00",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ],
+        "examOrFinal": {
+          "kind": "presentation",
+          "date": "2027-04-30",
+          "startTime": "14:00",
+          "endTime": "17:00",
+          "venue": "LT104",
+          "raw": "Final Presentation: Apr 30, 2027 (Fri), 14:00-17:00, LT104"
+        }
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7032",
+    "courseTitle": "Quantitative Trading",
+    "module": 5,
+    "courseType": "Elective",
+    "streamTags": [
+      "AI-A"
+    ],
+    "outlinePdfPath": "courseOutline/M5/MSBA7032-Quantitative-Trading-(2026-27).pdf",
+    "examOrFinal": {
+      "kind": "presentation",
+      "date": "2027-04-30",
+      "startTime": "18:30",
+      "endTime": "21:30",
+      "venue": "LT104",
+      "raw": "Final Presentation: Apr 30, 2027 (Fri), 18:30-21:30, LT104"
+    },
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Weichen WANG"
+          }
+        ],
+        "timeBucket": "NT",
+        "dayPattern": "Monday & Thursday 18:30-21:30",
+        "meetingDays": [
+          1,
+          4
+        ],
+        "outlinePdfPath": "courseOutline/M5/MSBA7032-Quantitative-Trading-(2026-27).pdf",
+        "meetings": [
+          {
+            "date": "2027-03-18",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-22",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-25",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-01",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-08",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-12",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-13",
+            "startTime": "14:00",
+            "endTime": "16:00",
+            "venue": "Classroom D",
+            "sessionType": "tutorial"
+          },
+          {
+            "date": "2027-04-15",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-19",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-22",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-26",
+            "startTime": "18:30",
+            "endTime": "21:30",
+            "venue": "LT104",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseCode": "MSBA7037",
+    "courseTitle": "A/B Testing in Product Management",
+    "module": 5,
+    "courseType": "Elective",
+    "streamTags": [
+      "MC-AM"
+    ],
+    "outlinePdfPath": null,
+    "examOrFinal": null,
+    "sections": [
+      {
+        "sectionId": "A",
+        "instructors": [
+          {
+            "name": "Prof. Shan HUANG"
+          }
+        ],
+        "timeBucket": "AM",
+        "dayPattern": "Saturday & Sunday 9:30-18:00 (incl. 1 hr lunch break)",
+        "meetingDays": [
+          0,
+          6
+        ],
+        "outlinePdfPath": null,
+        "meetings": [
+          {
+            "date": "2027-03-20",
+            "startTime": "09:30",
+            "endTime": "18:00",
+            "venue": "HKU Shenzhen",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-03-21",
+            "startTime": "09:30",
+            "endTime": "18:00",
+            "venue": "HKU Shenzhen",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-03",
+            "startTime": "09:30",
+            "endTime": "18:00",
+            "venue": "HKU Shenzhen",
+            "sessionType": "lecture"
+          },
+          {
+            "date": "2027-04-04",
+            "startTime": "09:30",
+            "endTime": "18:00",
+            "venue": "HKU Shenzhen",
+            "sessionType": "lecture"
+          }
+        ]
+      }
+    ]
+  }
+]
