@@ -1,38 +1,43 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { BookOpen, CalendarDays, Check, ChevronRight, CircleAlert, Clock3, GraduationCap, Heart, LayoutDashboard, Menu, Search, Sparkles, Trash2, X } from "lucide-react";
+import {
+  BookOpen, CalendarDays, Check, ChevronRight, CircleAlert, Clock3,
+  ExternalLink, GraduationCap, Heart, LayoutDashboard, Menu, Search,
+  Sparkles, Trash2, Users, X
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 
-type Course = {
-  code: string; name: string; module: number; type: "Core" | "Elective" | "Capstone";
-  stream?: "AI · List A" | "AI · List B" | "MC · List C" | "MC · List D";
-  teacher: string; days: string; time: string; slot: string; className: string;
-  assessment: "Exam" | "Presentation" | "Project"; accent: string;
+type Instructor = { name: string; note?: string };
+type Meeting = {
+  date: string; startTime: string; endTime: string; venue: string;
+  sessionType: "lecture" | "tutorial"; instructors?: string[];
 };
-
-const courses: Course[] = [
-  { code: "MSBA7001", name: "Python for Data Analytics", module: 1, type: "Core", teacher: "Prof. Chao Ding", days: "Wed & Sat", time: "09:30–12:30", slot: "wed-am", className: "Class A", assessment: "Exam", accent: "blue" },
-  { code: "MSBA7003", name: "Decision Analytics", module: 1, type: "Core", teacher: "Prof. Wei Zhang", days: "Tue & Fri", time: "14:00–17:00", slot: "tue-pm", className: "Class B", assessment: "Exam", accent: "cyan" },
-  { code: "MSBA7002", name: "Business Statistics", module: 2, type: "Core", teacher: "Prof. Zhanrui Cai", days: "Mon & Thu", time: "09:30–12:30", slot: "mon-am", className: "Class A", assessment: "Exam", accent: "violet" },
-  { code: "MSBA7004", name: "Operations Analytics", module: 2, type: "Core", teacher: "Prof. Huiyin Ouyang", days: "Wed & Sat", time: "14:00–17:00", slot: "wed-pm", className: "Class C", assessment: "Exam", accent: "indigo" },
-  { code: "MSBA7013", name: "Forecasting and Predictive Analytics", module: 3, type: "Elective", stream: "AI · List A", teacher: "Prof. Xinghao Qiao", days: "Mon & Thu", time: "09:30–12:30", slot: "mon-am", className: "Class A", assessment: "Project", accent: "emerald" },
-  { code: "MSBA7014", name: "Business Simulation", module: 3, type: "Elective", stream: "MC · List C", teacher: "Prof. S. Panchanatham", days: "Wed & Sat", time: "18:30–21:30", slot: "wed-night", className: "Class A", assessment: "Presentation", accent: "amber" },
-  { code: "MSBA7024", name: "Database Design and Management", module: 3, type: "Elective", stream: "MC · List C", teacher: "Prof. Michael Chau", days: "Tue & Fri", time: "14:00–17:00", slot: "tue-pm", className: "Class C", assessment: "Exam", accent: "rose" },
-  { code: "MSBA7027", name: "Machine Learning", module: 3, type: "Elective", stream: "AI · List A", teacher: "Prof. Zhengli Wang", days: "Mon & Thu", time: "18:30–21:30", slot: "mon-night", className: "Class A", assessment: "Exam", accent: "blue" },
-  { code: "MSBA7033", name: "Generative Artificial Intelligence", module: 3, type: "Elective", stream: "AI · List B", teacher: "Prof. Yifan Yu", days: "Tue & Fri", time: "09:30–12:30", slot: "tue-am", className: "Class A", assessment: "Exam", accent: "violet" },
-  { code: "MSBA7012", name: "Social Media & Digital Marketing Analytics", module: 4, type: "Elective", stream: "MC · List D", teacher: "Prof. Hailiang Chen", days: "Mon & Thu", time: "09:30–12:30", slot: "mon-am", className: "Class A", assessment: "Presentation", accent: "rose" },
-  { code: "MSBA7025", name: "Digital Experimentation Methods", module: 4, type: "Elective", stream: "MC · List C", teacher: "Prof. Jing Ouyang", days: "Wed & Sat", time: "14:00–17:00", slot: "wed-pm", className: "Class A", assessment: "Presentation", accent: "cyan" },
-  { code: "MSBA7026", name: "Big Data Analytics on the Cloud", module: 4, type: "Elective", stream: "AI · List B", teacher: "Prof. Zhepeng Li", days: "Tue & Fri", time: "14:00–17:00", slot: "tue-pm", className: "Class A", assessment: "Project", accent: "indigo" },
-  { code: "MSBA7028", name: "Deep Learning", module: 4, type: "Elective", stream: "AI · List A", teacher: "Prof. Xiao Lei", days: "Tue & Fri", time: "18:30–21:30", slot: "tue-night", className: "Class A", assessment: "Presentation", accent: "emerald" },
-  { code: "MSBA7029", name: "Storytelling with Data", module: 4, type: "Elective", stream: "MC · List C", teacher: "Prof. Xin Tong", days: "Mon & Thu", time: "18:30–21:30", slot: "mon-night", className: "Class A", assessment: "Presentation", accent: "amber" },
-  { code: "MSBA7035", name: "Applied Large Language Models", module: 4, type: "Elective", stream: "AI · List B", teacher: "Prof. Hailiang Chen", days: "Mon & Thu", time: "14:00–17:00", slot: "mon-pm", className: "Class A", assessment: "Presentation", accent: "blue" },
-  { code: "MSBA7036", name: "Ethics in Artificial Intelligence", module: 4, type: "Elective", stream: "AI · List B", teacher: "Prof. Rachel Sterken", days: "Mon & Thu", time: "14:00–17:00", slot: "mon-pm", className: "Class A", assessment: "Project", accent: "violet" },
-  { code: "MSBA7005", name: "Business Analytics Capstone", module: 5, type: "Capstone", teacher: "Prof. Jack Jiang", days: "Tue & Fri", time: "09:30–12:30", slot: "tue-am", className: "Class A", assessment: "Project", accent: "cyan" },
-  { code: "MSBA7016", name: "Supply Chain and Logistics Management", module: 5, type: "Elective", stream: "MC · List D", teacher: "Prof. Benjamin Yen", days: "Tue & Fri", time: "18:30–21:30", slot: "tue-night", className: "Class A", assessment: "Presentation", accent: "rose" },
-];
+type Exam = {
+  kind: "exam" | "presentation" | "midterm" | "other";
+  date: string | null; startTime: string | null; endTime: string | null;
+  venue: string | null; raw: string;
+};
+type Section = {
+  sectionId: string; instructors: Instructor[]; timeBucket: "AM" | "PM" | "NT";
+  dayPattern: string; meetingDays: number[]; outlinePdfPath: string | null;
+  meetings: Meeting[]; examOrFinal?: Exam | null;
+};
+type Course = {
+  courseCode: string; courseTitle: string; module: number;
+  courseType: "Core" | "Elective" | "Capstone"; streamTags: string[];
+  outlinePdfPath: string | null; examOrFinal: Exam | null; sections: Section[];
+};
+type Requirements = {
+  totalCourses: number; creditsPerCourse: number; coreCourses: string[];
+  electiveCount: number; capstoneCourses: { courseCode: string; courseTitle: string }[];
+  streams: Record<string, { name: string; description: string; listA?: CourseList; listB?: CourseList; listC?: CourseList; listD?: CourseList }>;
+  notes: string[];
+};
+type CourseList = { name: string; minRequired: number; courses: string[] };
+type Selection = { key: string; courseCode: string; module: number; sectionId: string };
 
 const moduleDates = ["", "Sep 5 – Oct 21", "Oct 22 – Nov 30", "Dec 1 – Jan 21", "Jan 22 – Mar 10", "Mar 18 – May 4"];
 const nav = [
@@ -43,100 +48,391 @@ const nav = [
 ] as const;
 type Tab = (typeof nav)[number]["id"];
 
-declare global { interface Document { modelContext?: { registerTool: (tool: Record<string, unknown>, options?: { signal?: AbortSignal }) => void | Promise<void> } } }
+declare global {
+  interface Document {
+    modelContext?: { registerTool: (tool: Record<string, unknown>, options?: { signal?: AbortSignal }) => void | Promise<void> };
+  }
+}
 
+function selectionKey(course: Course, section: Section) {
+  return course.courseCode + "|M" + course.module + "|" + section.sectionId;
+}
+function resolveSelection(courses: Course[], value: Selection) {
+  const course = courses.find((item) => item.courseCode === value.courseCode && item.module === value.module);
+  const section = course?.sections.find((item) => item.sectionId === value.sectionId);
+  return course && section ? { course, section, selection: value } : null;
+}
+function instructorNames(section: Section) {
+  return section.instructors.map((item) => item.name + (item.note ? " (" + item.note + ")" : "")).join(" / ");
+}
+function examFor(course: Course, section: Section) {
+  return section.examOrFinal === undefined ? course.examOrFinal : section.examOrFinal;
+}
+function overlaps(a: Meeting, b: Meeting) {
+  return a.date === b.date && a.startTime < b.endTime && b.startTime < a.endTime;
+}
+function accentFor(code: string) {
+  const tones = ["blue", "cyan", "violet", "indigo", "emerald", "amber", "rose"];
+  return tones[Number(code.slice(-2)) % tones.length];
+}
+function tagLabel(tag: string) {
+  const labels: Record<string, string> = {
+    "AI-A": "AI · List A", "AI-M": "AI · List B",
+    "MC-AM": "MC · List C", "MC-DE": "MC · List D"
+  };
+  return labels[tag] || tag;
+}
 function Pill({ children, tone = "slate" }: { children: React.ReactNode; tone?: string }) {
-  return <span className={`pill pill-${tone}`}>{children}</span>;
+  return <span className={"pill pill-" + tone}>{children}</span>;
 }
 
 export default function Home() {
+  const [courses, setCourses] = useState<Course[]>([]);
+  const [requirements, setRequirements] = useState<Requirements | null>(null);
+  const [loading, setLoading] = useState(true);
   const [tab, setTab] = useState<Tab>("courses");
-  const [selected, setSelected] = useState<string[]>([]);
+  const [selected, setSelected] = useState<Record<string, Selection>>({});
   const [wishlist, setWishlist] = useState<string[]>([]);
   const [query, setQuery] = useState("");
   const [moduleFilter, setModuleFilter] = useState<number | "all">("all");
   const [typeFilter, setTypeFilter] = useState("all");
+  const [activeCode, setActiveCode] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem("hku-ba-plan");
-    if (saved) try { const parsed = JSON.parse(saved); setSelected(Array.isArray(parsed.selected) ? parsed.selected : []); setWishlist(Array.isArray(parsed.wishlist) ? parsed.wishlist : []); } catch {}
+    Promise.all([
+      fetch("/courses.json").then((response) => response.json()),
+      fetch("/requirements.json").then((response) => response.json())
+    ]).then(([courseData, requirementData]) => {
+      setCourses(courseData);
+      setRequirements(requirementData);
+    }).finally(() => setLoading(false));
   }, []);
-  useEffect(() => { localStorage.setItem("hku-ba-plan", JSON.stringify({ selected, wishlist })); }, [selected, wishlist]);
+
+  useEffect(() => {
+    const saved = localStorage.getItem("hku-ba-plan-v2");
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (parsed.selected && typeof parsed.selected === "object") setSelected(parsed.selected);
+        if (Array.isArray(parsed.wishlist)) setWishlist(parsed.wishlist);
+      } catch {}
+    }
+    setHydrated(true);
+  }, []);
+  useEffect(() => {
+    if (hydrated) localStorage.setItem("hku-ba-plan-v2", JSON.stringify({ selected, wishlist }));
+  }, [selected, wishlist, hydrated]);
+
+  const catalog = useMemo(() => {
+    const groups = new Map<string, Course[]>();
+    courses.forEach((course) => groups.set(course.courseCode, [...(groups.get(course.courseCode) || []), course]));
+    return Array.from(groups.entries()).map(([code, offerings]) => ({
+      code,
+      title: offerings[0].courseTitle,
+      type: offerings[0].courseType,
+      tags: Array.from(new Set(offerings.flatMap((item) => item.streamTags))),
+      offerings: offerings.sort((a, b) => a.module - b.module)
+    }));
+  }, [courses]);
+
+  const selectedItems = useMemo(
+    () => Object.values(selected).map((item) => resolveSelection(courses, item)).filter(Boolean) as { course: Course; section: Section; selection: Selection }[],
+    [courses, selected]
+  );
+
+  const conflicts = useMemo(() => {
+    const result = new Set<string>();
+    selectedItems.forEach((left, index) => {
+      selectedItems.slice(index + 1).forEach((right) => {
+        const leftMeetings = left.section.meetings.filter((item) => item.sessionType === "lecture");
+        const rightMeetings = right.section.meetings.filter((item) => item.sessionType === "lecture");
+        if (leftMeetings.some((a) => rightMeetings.some((b) => overlaps(a, b)))) {
+          result.add(left.selection.key);
+          result.add(right.selection.key);
+        }
+      });
+    });
+    return result;
+  }, [selectedItems]);
+
+  const filtered = catalog.filter((group) => {
+    const text = [
+      group.code, group.title,
+      ...group.offerings.flatMap((course) => course.sections.flatMap((section) => section.instructors.map((item) => item.name)))
+    ].join(" ").toLowerCase();
+    return text.includes(query.toLowerCase())
+      && (moduleFilter === "all" || group.offerings.some((item) => item.module === moduleFilter))
+      && (typeFilter === "all" || group.type === typeFilter);
+  });
+
+  const showNotice = (message: string) => {
+    setNotice(message);
+    window.setTimeout(() => setNotice(null), 2400);
+  };
+  const chooseSection = (course: Course, section: Section) => {
+    const key = selectionKey(course, section);
+    if (selected[course.courseCode]?.key === key) {
+      setSelected((current) => {
+        const next = { ...current };
+        delete next[course.courseCode];
+        return next;
+      });
+      showNotice(course.courseCode + " Class " + section.sectionId + " removed");
+      return;
+    }
+    setSelected((current) => ({
+      ...current,
+      [course.courseCode]: { key, courseCode: course.courseCode, module: course.module, sectionId: section.sectionId }
+    }));
+    setWishlist((current) => current.filter((code) => code !== course.courseCode));
+    showNotice(course.courseCode + " · Module " + course.module + " · Class " + section.sectionId + " selected");
+  };
+  const toggleWishlist = (code: string) => {
+    setWishlist((current) => current.includes(code) ? current.filter((item) => item !== code) : [...current, code]);
+  };
+
   useEffect(() => {
     const context = document.modelContext;
-    if (!context?.registerTool) return;
+    if (!context?.registerTool || courses.length === 0) return;
     const lifecycle = new AbortController();
-    const add = (code: string) => { if (!courses.some((c) => c.code === code)) throw new Error("Unknown course code"); setSelected((v) => v.includes(code) ? v : [...v, code]); setWishlist((v) => v.filter((x) => x !== code)); return { added: code }; };
-    void Promise.resolve(context.registerTool({ name: "add_course_to_plan", title: "Add course to plan", description: "Add one HKU MSc(BA) course to the visible study plan.", inputSchema: { type: "object", properties: { code: { type: "string" } }, required: ["code"], additionalProperties: false }, annotations: { readOnlyHint: false, untrustedContentHint: false }, execute: (input: unknown) => add((input as { code: string }).code) }, { signal: lifecycle.signal })).catch(() => undefined);
-    void Promise.resolve(context.registerTool({ name: "read_course_plan", title: "Read course plan", description: "Return the course codes currently selected in the planner.", inputSchema: { type: "object", properties: {}, additionalProperties: false }, annotations: { readOnlyHint: true, untrustedContentHint: false }, execute: () => ({ selected }) }, { signal: lifecycle.signal })).catch(() => undefined);
+    const addCourse = (code: string, module?: number, classId?: string) => {
+      const course = courses.find((item) => item.courseCode === code && (!module || item.module === module))
+        || courses.find((item) => item.courseCode === code);
+      const section = course?.sections.find((item) => !classId || item.sectionId === classId) || course?.sections[0];
+      if (!course || !section) throw new Error("Unknown course or class");
+      const key = selectionKey(course, section);
+      setSelected((current) => ({
+        ...current,
+        [code]: { key, courseCode: code, module: course.module, sectionId: section.sectionId }
+      }));
+      return { added: code, module: course.module, classId: section.sectionId };
+    };
+    void Promise.resolve(context.registerTool({
+      name: "add_course_to_plan",
+      title: "Add course class to plan",
+      description: "Choose a specific HKU MSc(BA) course class. Module and classId are optional.",
+      inputSchema: {
+        type: "object",
+        properties: { code: { type: "string" }, module: { type: "number" }, classId: { type: "string" } },
+        required: ["code"], additionalProperties: false
+      },
+      annotations: { readOnlyHint: false, untrustedContentHint: false },
+      execute: (input: unknown) => {
+        const value = input as { code: string; module?: number; classId?: string };
+        return addCourse(value.code, value.module, value.classId);
+      }
+    }, { signal: lifecycle.signal })).catch(() => undefined);
+    void Promise.resolve(context.registerTool({
+      name: "read_course_plan",
+      title: "Read course plan",
+      description: "Return selected courses, modules and classes.",
+      inputSchema: { type: "object", properties: {}, additionalProperties: false },
+      annotations: { readOnlyHint: true, untrustedContentHint: false },
+      execute: () => ({ selected: Object.values(selected) })
+    }, { signal: lifecycle.signal })).catch(() => undefined);
     return () => lifecycle.abort();
-  }, [selected]);
+  }, [courses, selected]);
 
-  const selectedCourses = useMemo(() => courses.filter((c) => selected.includes(c.code)), [selected]);
-  const conflicts = useMemo(() => { const result = new Set<string>(); selectedCourses.forEach((c, i) => selectedCourses.slice(i + 1).forEach((o) => { if (c.module === o.module && c.slot === o.slot) { result.add(c.code); result.add(o.code); } })); return result; }, [selectedCourses]);
-  const coreCount = selectedCourses.filter((c) => c.type === "Core").length;
-  const electiveCount = selectedCourses.filter((c) => c.type === "Elective").length;
-  const capstoneCount = selectedCourses.filter((c) => c.type === "Capstone").length;
-  const aiA = selectedCourses.some((c) => c.stream === "AI · List A");
-  const aiB = selectedCourses.some((c) => c.stream === "AI · List B");
-  const completion = Math.min(100, Math.round((selected.length / 10) * 100));
-  const filtered = courses.filter((c) => `${c.code} ${c.name} ${c.teacher}`.toLowerCase().includes(query.toLowerCase()) && (moduleFilter === "all" || c.module === moduleFilter) && (typeFilter === "all" || c.type === typeFilter));
-
-  const toggleCourse = (course: Course) => {
-    if (selected.includes(course.code)) { setSelected(selected.filter((x) => x !== course.code)); setNotice(`${course.code} removed from your plan`); }
-    else { setSelected([...selected, course.code]); setWishlist(wishlist.filter((x) => x !== course.code)); setNotice(`${course.code} · ${course.className} added`); }
-    setTimeout(() => setNotice(null), 2400);
-  };
-  const toggleWishlist = (code: string) => setWishlist(wishlist.includes(code) ? wishlist.filter((x) => x !== code) : [...wishlist, code]);
+  const coreCount = selectedItems.filter((item) => item.course.courseType === "Core").length;
+  const electiveCount = selectedItems.filter((item) => item.course.courseType === "Elective").length;
+  const capstoneCount = selectedItems.filter((item) => item.course.courseType === "Capstone").length;
+  const completion = Math.min(100, Math.round((selectedItems.length / (requirements?.totalCourses || 10)) * 100));
+  const activeOfferings = activeCode ? catalog.find((item) => item.code === activeCode)?.offerings || [] : [];
 
   return <div className="app-shell">
     <header className="topbar">
-      <button className="brand" onClick={() => setTab("courses")} aria-label="Go to courses"><span className="brand-mark"><GraduationCap size={22} /></span><span><strong>HKU</strong> MSc(BA) Planner</span></button>
-      <nav className="desktop-nav" aria-label="Main navigation">{nav.map(({ id, label, icon: Icon }) => <button key={id} className={tab === id ? "nav-item active" : "nav-item"} onClick={() => setTab(id)}><Icon size={17} />{label}{id === "planner" && selected.length > 0 && <span className="nav-count">{selected.length}</span>}</button>)}</nav>
+      <button className="brand" onClick={() => setTab("courses")} aria-label="Go to courses">
+        <span className="brand-mark"><GraduationCap size={22} /></span>
+        <span><strong>HKU</strong> MSc(BA) Planner</span>
+      </button>
+      <nav className="desktop-nav" aria-label="Main navigation">
+        {nav.map(({ id, label, icon: Icon }) => <button key={id} className={tab === id ? "nav-item active" : "nav-item"} onClick={() => setTab(id)}>
+          <Icon size={17} />{label}{id === "planner" && selectedItems.length > 0 && <span className="nav-count">{selectedItems.length}</span>}
+        </button>)}
+      </nav>
       <div className="top-actions"><Pill tone="green">AY 2026–27</Pill><button className="mobile-menu" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Open menu"><Menu size={21} /></button></div>
     </header>
     {mobileOpen && <nav className="mobile-nav">{nav.map(({ id, label }) => <button key={id} onClick={() => { setTab(id); setMobileOpen(false); }}>{label}</button>)}</nav>}
 
     <main className="page-wrap">
       {tab === "courses" && <section>
-        <div className="page-heading"><div><p className="eyebrow">AY 2026–27 · 18 COURSES</p><h1>Build a course plan that works.</h1><p>Browse every available class, spot conflicts early, and keep your graduation requirements on track.</p></div><Button className="plan-button" onClick={() => setTab("planner")}>View my plan <span>{selected.length}</span><ChevronRight size={16} /></Button></div>
-        <div className="notice-card"><div className="notice-icon"><Sparkles size={19} /></div><div><strong>Teaching plan updated</strong><p>MSBA7003 Class C & D schedules were revised on Sep 11.</p></div><button>Review update</button></div>
-        <div className="filter-bar"><label className="search-box"><Search size={18} /><Input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search course, code, or instructor" /></label><div className="filter-chips"><button className={moduleFilter === "all" ? "chip active" : "chip"} onClick={() => setModuleFilter("all")}>All modules</button>{[1,2,3,4,5].map((m) => <button key={m} className={moduleFilter === m ? "chip active" : "chip"} onClick={() => setModuleFilter(m)}>M{m}</button>)}</div><select value={typeFilter} onChange={(e) => setTypeFilter(e.target.value)} aria-label="Course type"><option value="all">All types</option><option>Core</option><option>Elective</option><option>Capstone</option></select></div>
-        <div className="course-summary"><span>{filtered.length} classes</span><span>Updated Sep 11, 2026</span></div>
-        <div className="course-grid">{filtered.map((course) => { const isSelected = selected.includes(course.code); const wished = wishlist.includes(course.code); return <article className={`course-card accent-${course.accent}`} key={course.code}>
-          <div className="course-card-top"><div className="course-tags"><Pill tone={course.type === "Core" ? "blue" : course.type === "Capstone" ? "purple" : "slate"}>{course.type}</Pill>{course.stream && <Pill tone="green">{course.stream}</Pill>}</div><button className={wished ? "heart active" : "heart"} onClick={() => toggleWishlist(course.code)} aria-label={`${wished ? "Remove" : "Add"} ${course.code} wishlist`}><Heart size={18} fill={wished ? "currentColor" : "none"} /></button></div>
-          <p className="course-code">{course.code} · MODULE {course.module}</p><h2>{course.name}</h2><p className="teacher">{course.teacher}</p>
-          <div className="schedule-box"><span><CalendarDays size={16} />{course.days}</span><span><Clock3 size={16} />{course.time}</span></div><div className="course-meta"><span>{course.className}</span><span>{course.assessment}</span><span>{moduleDates[course.module]}</span></div>
-          <Button variant={isSelected ? "outline" : "default"} className={isSelected ? "course-action selected" : "course-action"} onClick={() => toggleCourse(course)}>{isSelected ? <><Check size={16} /> Added to plan</> : "Add to plan"}</Button>
-        </article>; })}</div>
+        <div className="page-heading">
+          <div><p className="eyebrow">AY 2026–27 · {catalog.length || 28} COURSES · {courses.reduce((sum, item) => sum + item.sections.length, 0) || 49} CLASSES</p>
+            <h1>Choose the course. Then choose the class.</h1>
+            <p>Browse the complete teaching plan, compare Class A/B/C/D schedules, and inspect every lecture, venue and final assessment before adding it.</p>
+          </div>
+          <Button className="plan-button" onClick={() => setTab("planner")}>View my plan <span>{selectedItems.length}</span><ChevronRight size={16} /></Button>
+        </div>
+        <div className="notice-card"><div className="notice-icon"><Sparkles size={19} /></div><div><strong>Complete class-level timetable</strong><p>Now includes 28 course codes, 30 module offerings and 49 selectable classes.</p></div><button onClick={() => setActiveCode("MSBA7001")}>See an example</button></div>
+        <div className="filter-bar">
+          <label className="search-box"><Search size={18} /><Input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search course, code, or instructor" /></label>
+          <div className="filter-chips"><button className={moduleFilter === "all" ? "chip active" : "chip"} onClick={() => setModuleFilter("all")}>All modules</button>{[1,2,3,4,5].map((module) => <button key={module} className={moduleFilter === module ? "chip active" : "chip"} onClick={() => setModuleFilter(module)}>M{module}</button>)}</div>
+          <select value={typeFilter} onChange={(event) => setTypeFilter(event.target.value)} aria-label="Course type"><option value="all">All types</option><option>Core</option><option>Elective</option><option>Capstone</option></select>
+        </div>
+        <div className="course-summary"><span>{filtered.length} courses</span><span>Teaching plan version: Sep 11, 2026</span></div>
+        {loading ? <div className="panel empty"><BookOpen size={30} /><h3>Loading the complete timetable…</h3></div> :
+        <div className="course-grid">{filtered.map((group) => {
+          const wished = wishlist.includes(group.code);
+          const current = selected[group.code];
+          const sectionCount = group.offerings.reduce((sum, item) => sum + item.sections.length, 0);
+          const teachers = Array.from(new Set(group.offerings.flatMap((course) => course.sections.flatMap((section) => section.instructors.map((item) => item.name)))));
+          const classes = Array.from(new Set(group.offerings.flatMap((course) => course.sections.map((section) => section.sectionId))));
+          return <article className={"course-card accent-" + accentFor(group.code)} key={group.code}>
+            <div className="course-card-top"><div className="course-tags"><Pill tone={group.type === "Core" ? "blue" : group.type === "Capstone" ? "purple" : "slate"}>{group.type}</Pill>{group.tags.map((tag) => <Pill tone="green" key={tag}>{tagLabel(tag)}</Pill>)}</div>
+              <button className={wished ? "heart active" : "heart"} onClick={() => toggleWishlist(group.code)} aria-label="Toggle wishlist"><Heart size={18} fill={wished ? "currentColor" : "none"} /></button>
+            </div>
+            <p className="course-code">{group.code} · {group.offerings.map((item) => "MODULE " + item.module).join(" / ")}</p>
+            <h2>{group.title}</h2><p className="teacher">{teachers.slice(0, 2).join(" / ")}{teachers.length > 2 ? " +" + (teachers.length - 2) : ""}</p>
+            <div className="schedule-box"><span><Users size={16} />{sectionCount} {sectionCount === 1 ? "class" : "classes"}</span><span><CalendarDays size={16} />{classes.map((item) => "Class " + item).join(", ")}</span></div>
+            <div className="course-meta"><span>{group.offerings.map((item) => "M" + item.module).join(", ")}</span><span>{moduleDates[group.offerings[0].module]}</span>{current && <span className="selected-class">Selected: M{current.module} Class {current.sectionId}</span>}</div>
+            <Button variant={current ? "outline" : "default"} className={current ? "course-action selected" : "course-action"} onClick={() => setActiveCode(group.code)}>
+              {current ? <><Check size={16} /> Change class</> : "View classes & choose"}
+            </Button>
+          </article>;
+        })}</div>}
       </section>}
 
-      {tab === "planner" && <section>
-        <div className="page-heading compact"><div><p className="eyebrow">PERSONAL WORKSPACE</p><h1>My course plan</h1><p>Your selections are saved automatically on this device.</p></div><Button onClick={() => setTab("courses")}>Browse courses</Button></div>
-        <div className="stat-grid">{[{ label: "Selected", value: selected.length, target: 10 }, { label: "Core", value: coreCount, target: 4 }, { label: "Electives", value: electiveCount, target: 5 }, { label: "Capstone", value: capstoneCount, target: 1 }].map((item) => <div className="stat-card" key={item.label}><span>{item.label}</span><strong>{item.value}<small>/{item.target}</small></strong><Progress value={Math.min(100, item.value / item.target * 100)} /></div>)}</div>
-        <div className="planner-layout"><div className="panel selected-panel"><div className="panel-head"><div><h2>Selected courses</h2><p>{selected.length * 6} credits · {conflicts.size} conflicts</p></div></div>
-          {selectedCourses.length === 0 ? <div className="empty"><BookOpen size={30} /><h3>No courses selected yet</h3><p>Browse the catalogue and add your first class.</p><Button onClick={() => setTab("courses")}>Browse & add</Button></div> : selectedCourses.map((course) => <div className="plan-row" key={course.code}><span className={`course-dot bg-${course.accent}`} /><div className="plan-info"><strong>{course.code}</strong><span>{course.name}</span><small>{course.days} · {course.time} · Module {course.module}</small>{conflicts.has(course.code) && <em><CircleAlert size={13} /> Time conflict in Module {course.module}</em>}</div><button onClick={() => toggleCourse(course)} aria-label={`Remove ${course.code}`}><Trash2 size={17} /></button></div>)}
-        </div><aside className="panel requirement-panel"><div className="completion-ring" style={{ "--progress": `${completion * 3.6}deg` } as React.CSSProperties}><div><strong>{completion}%</strong><span>complete</span></div></div><h2>Degree progress</h2><RequirementRow label="10 courses selected" done={selected.length >= 10} detail={`${selected.length}/10`} /><RequirementRow label="4 core courses" done={coreCount >= 4} detail={`${coreCount}/4`} /><RequirementRow label="5 electives" done={electiveCount >= 5} detail={`${electiveCount}/5`} /><RequirementRow label="1 capstone" done={capstoneCount >= 1} detail={`${capstoneCount}/1`} /><div className="stream-box"><strong>AI stream</strong><span className={aiA ? "done" : ""}>{aiA ? "✓" : "○"} List A</span><span className={aiB ? "done" : ""}>{aiB ? "✓" : "○"} List B</span></div></aside></div>
-        {wishlist.length > 0 && <div className="panel wishlist"><div className="panel-head"><div><h2>Wishlist</h2><p>Courses you are still considering.</p></div></div><div className="wishlist-list">{wishlist.map((code) => { const course = courses.find((c) => c.code === code)!; return <button key={code} onClick={() => toggleCourse(course)}><Heart size={15} fill="currentColor" /><span><strong>{code}</strong>{course.name}</span><ChevronRight size={16} /></button>; })}</div></div>}
-      </section>}
-      {tab === "calendar" && <CalendarView selectedCourses={selectedCourses} onBrowse={() => setTab("courses")} />}
-      {tab === "requirements" && <RequirementsView selectedCourses={selectedCourses} />}
+      {tab === "planner" && <PlannerView selectedItems={selectedItems} conflicts={conflicts} requirements={requirements} onBrowse={() => setTab("courses")} onRemove={(code) => {
+        setSelected((current) => { const next = { ...current }; delete next[code]; return next; });
+      }} onOpen={setActiveCode} completion={completion} coreCount={coreCount} electiveCount={electiveCount} capstoneCount={capstoneCount} wishlist={wishlist} catalog={catalog} />}
+
+      {tab === "calendar" && <CalendarView selectedItems={selectedItems} onBrowse={() => setTab("courses")} onOpen={setActiveCode} />}
+      {tab === "requirements" && <RequirementsView selectedItems={selectedItems} courses={courses} requirements={requirements} />}
     </main>
-    <footer><span>Built for HKU MSc(BA) students</span><span>Unofficial planner · Always verify with HKU</span></footer>
+
+    <footer><span>Built for HKU MSc(BA) students</span><span>Unofficial planner · Verify selections with official HKU communications</span></footer>
+    {activeCode && <CourseDetailModal offerings={activeOfferings} selected={selected} onChoose={chooseSection} onClose={() => setActiveCode(null)} />}
     {notice && <div className="toast"><Check size={16} />{notice}<button onClick={() => setNotice(null)}><X size={15} /></button></div>}
   </div>;
 }
 
-function RequirementRow({ label, done, detail }: { label: string; done: boolean; detail: string }) { return <div className="requirement-row"><span className={done ? "check done" : "check"}>{done && <Check size={13} />}</span><span>{label}</span><strong>{detail}</strong></div>; }
-
-function CalendarView({ selectedCourses, onBrowse }: { selectedCourses: Course[]; onBrowse: () => void }) {
-  return <section><div className="page-heading compact"><div><p className="eyebrow">ACADEMIC YEAR 2026–27</p><h1>Course calendar</h1><p>A clear view of your selected classes across five teaching modules.</p></div></div>{selectedCourses.length === 0 ? <div className="panel empty calendar-empty"><CalendarDays size={34} /><h3>Your calendar is empty</h3><p>Add courses to see your teaching schedule.</p><Button onClick={onBrowse}>Browse courses</Button></div> : <div className="timeline">{[1,2,3,4,5].map((module) => <div className="timeline-module" key={module}><div className="module-label"><strong>Module {module}</strong><span>{moduleDates[module]}</span></div><div className="module-events">{selectedCourses.filter((c) => c.module === module).length === 0 ? <span className="no-events">No selected classes</span> : selectedCourses.filter((c) => c.module === module).map((course) => <div className={`calendar-event accent-${course.accent}`} key={course.code}><span>{course.time}</span><strong>{course.code}</strong><p>{course.name}</p><small>{course.days} · {course.className}</small></div>)}</div></div>)}</div>}</section>;
+function CourseDetailModal({ offerings, selected, onChoose, onClose }: {
+  offerings: Course[]; selected: Record<string, Selection>;
+  onChoose: (course: Course, section: Section) => void; onClose: () => void;
+}) {
+  if (offerings.length === 0) return null;
+  const first = offerings[0];
+  const current = selected[first.courseCode];
+  return <div className="detail-overlay" role="dialog" aria-modal="true" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
+    <div className="detail-sheet">
+      <div className="detail-top">
+        <div><p className="eyebrow">COURSE DETAILS</p><h2>{first.courseCode} {first.courseTitle}</h2><div className="course-tags"><Pill tone={first.courseType === "Core" ? "blue" : first.courseType === "Capstone" ? "purple" : "slate"}>{first.courseType}</Pill>{first.streamTags.map((tag) => <Pill tone="green" key={tag}>{tagLabel(tag)}</Pill>)}</div></div>
+        <button className="detail-close" onClick={onClose} aria-label="Close course details"><X size={21} /></button>
+      </div>
+      <div className="detail-body">
+        {offerings.map((course) => <section className="offering" key={course.courseCode + course.module}>
+          <div className="offering-head"><div><strong>Module {course.module}</strong><span>{moduleDates[course.module]}</span></div><span>{course.sections.length} {course.sections.length === 1 ? "class" : "classes"}</span></div>
+          <div className="section-list">{course.sections.map((section) => {
+            const key = selectionKey(course, section);
+            const chosen = current?.key === key;
+            const lectures = section.meetings.filter((item) => item.sessionType === "lecture");
+            const tutorials = section.meetings.filter((item) => item.sessionType === "tutorial");
+            const exam = examFor(course, section);
+            const outline = section.outlinePdfPath || course.outlinePdfPath;
+            return <article className={chosen ? "section-card chosen" : "section-card"} key={key}>
+              <div className="section-summary">
+                <span className="class-badge">Class {section.sectionId}</span><Pill tone={section.timeBucket === "AM" ? "blue" : section.timeBucket === "PM" ? "purple" : "slate"}>{section.timeBucket}</Pill>
+                <div className="section-main"><strong>{section.dayPattern}</strong><span>{instructorNames(section)}</span></div>
+                <Button variant={chosen ? "outline" : "default"} onClick={() => onChoose(course, section)}>{chosen ? <><Check size={15} /> Selected</> : "Choose this class"}</Button>
+              </div>
+              <div className="section-facts">
+                <span><CalendarDays size={15} />{lectures.length} lectures{tutorials.length ? " + " + tutorials.length + " tutorials" : ""}</span>
+                <span><Clock3 size={15} />{lectures[0] ? lectures[0].startTime + "–" + lectures[0].endTime : section.dayPattern}</span>
+                <span><Users size={15} />{lectures[0]?.venue || "Venue TBA"}</span>
+              </div>
+              <details className="sessions">
+                <summary>View all dates, venues and assessment <ChevronRight size={15} /></summary>
+                <div className="session-table-wrap"><table className="session-table"><thead><tr><th>Date</th><th>Time</th><th>Venue</th><th>Type</th><th>Instructor</th></tr></thead><tbody>
+                  {section.meetings.map((meeting, index) => <tr key={meeting.date + meeting.startTime + index}><td>{meeting.date}</td><td>{meeting.startTime}–{meeting.endTime}</td><td>{meeting.venue}</td><td><span className={"session-type " + meeting.sessionType}>{meeting.sessionType === "lecture" ? "LEC" : "TUT"}</span></td><td>{meeting.instructors?.join(" / ") || instructorNames(section)}</td></tr>)}
+                  {exam && <tr className="exam-row"><td>{exam.date || "TBA"}</td><td>{exam.startTime && exam.endTime ? exam.startTime + "–" + exam.endTime : "TBA"}</td><td>{exam.venue || "TBA"}</td><td><span className="session-type exam">{exam.kind.toUpperCase()}</span></td><td>—</td></tr>}
+                </tbody></table></div>
+                {outline && <a className="outline-link" href={"https://gingerbreap.github.io/HKUBS_BA_CourseList/" + outline} target="_blank" rel="noreferrer"><ExternalLink size={15} /> Open course outline</a>}
+              </details>
+            </article>;
+          })}</div>
+        </section>)}
+      </div>
+    </div>
+  </div>;
 }
 
-function RequirementsView({ selectedCourses }: { selectedCourses: Course[] }) {
-  const selectedCodes = new Set(selectedCourses.map((c) => c.code));
-  const groups = [{ title: "Core courses", note: "Complete all four", courses: courses.filter((c) => c.type === "Core") }, { title: "AI stream · List A", note: "Choose at least one", courses: courses.filter((c) => c.stream === "AI · List A") }, { title: "AI stream · List B", note: "Choose at least one", courses: courses.filter((c) => c.stream === "AI · List B") }, { title: "Capstone", note: "Choose one", courses: courses.filter((c) => c.type === "Capstone") }];
-  return <section><div className="page-heading compact"><div><p className="eyebrow">PROGRAMME STRUCTURE</p><h1>Graduation requirements</h1><p>Complete 10 courses × 6 credits: four core, five electives, and one capstone.</p></div></div><div className="requirements-grid">{groups.map((group) => <article className="panel rule-card" key={group.title}><div className="panel-head"><div><h2>{group.title}</h2><p>{group.note}</p></div></div>{group.courses.map((course) => <div className="rule-course" key={course.code}><span className={selectedCodes.has(course.code) ? "check done" : "check"}>{selectedCodes.has(course.code) && <Check size={13} />}</span><div><strong>{course.code}</strong><p>{course.name}</p></div><span>M{course.module}</span></div>)}</article>)}</div><div className="disclaimer"><CircleAlert size={18} /><p><strong>Planning guidance only.</strong> Course availability and programme rules may change. Verify your final selection with official HKU communications.</p></div></section>;
+function PlannerView({ selectedItems, conflicts, requirements, onBrowse, onRemove, onOpen, completion, coreCount, electiveCount, capstoneCount, wishlist, catalog }: {
+  selectedItems: { course: Course; section: Section; selection: Selection }[];
+  conflicts: Set<string>; requirements: Requirements | null; onBrowse: () => void;
+  onRemove: (code: string) => void; onOpen: (code: string) => void; completion: number;
+  coreCount: number; electiveCount: number; capstoneCount: number; wishlist: string[];
+  catalog: { code: string; title: string; type: string; tags: string[]; offerings: Course[] }[];
+}) {
+  const total = requirements?.totalCourses || 10;
+  return <section>
+    <div className="page-heading compact"><div><p className="eyebrow">PERSONAL WORKSPACE</p><h1>My course plan</h1><p>Each selection records the exact module and Class A/B/C/D. Choosing another class replaces the previous one for that course.</p></div><Button onClick={onBrowse}>Browse courses</Button></div>
+    <div className="stat-grid">{[
+      { label: "Selected", value: selectedItems.length, target: total },
+      { label: "Core", value: coreCount, target: 4 },
+      { label: "Electives", value: electiveCount, target: requirements?.electiveCount || 5 },
+      { label: "Capstone", value: capstoneCount, target: 1 }
+    ].map((item) => <div className="stat-card" key={item.label}><span>{item.label}</span><strong>{item.value}<small>/{item.target}</small></strong><Progress value={Math.min(100, item.value / item.target * 100)} /></div>)}</div>
+    <div className="planner-layout"><div className="panel selected-panel"><div className="panel-head"><div><h2>Selected classes</h2><p>{selectedItems.length * (requirements?.creditsPerCourse || 6)} credits · {conflicts.size} classes affected by conflicts</p></div></div>
+      {selectedItems.length === 0 ? <div className="empty"><BookOpen size={30} /><h3>No classes selected yet</h3><p>Open a course and choose a specific class.</p><Button onClick={onBrowse}>Browse & choose</Button></div> :
+      selectedItems.sort((a, b) => a.course.module - b.course.module).map(({ course, section, selection }) => <div className="plan-row" key={selection.key}>
+        <span className={"course-dot bg-" + accentFor(course.courseCode)} />
+        <div className="plan-info" onClick={() => onOpen(course.courseCode)} role="button"><strong>{course.courseCode}</strong><span>{course.courseTitle}</span><small>Module {course.module} · Class {section.sectionId} · {section.dayPattern}</small>{conflicts.has(selection.key) && <em><CircleAlert size={13} /> Exact-date time conflict detected</em>}</div>
+        <button onClick={() => onRemove(course.courseCode)} aria-label={"Remove " + course.courseCode}><Trash2 size={17} /></button>
+      </div>)}
+    </div>
+    <aside className="panel requirement-panel"><div className="completion-ring" style={{ "--progress": completion * 3.6 + "deg" } as React.CSSProperties}><div><strong>{completion}%</strong><span>complete</span></div></div><h2>Degree progress</h2>
+      <RequirementRow label={total + " courses selected"} done={selectedItems.length >= total} detail={selectedItems.length + "/" + total} />
+      <RequirementRow label="4 core courses" done={coreCount >= 4} detail={coreCount + "/4"} />
+      <RequirementRow label={(requirements?.electiveCount || 5) + " electives"} done={electiveCount >= (requirements?.electiveCount || 5)} detail={electiveCount + "/" + (requirements?.electiveCount || 5)} />
+      <RequirementRow label="1 capstone" done={capstoneCount >= 1} detail={capstoneCount + "/1"} />
+    </aside></div>
+    {wishlist.length > 0 && <div className="panel wishlist"><div className="panel-head"><div><h2>Wishlist</h2><p>Open a course to compare its classes.</p></div></div><div className="wishlist-list">{wishlist.map((code) => {
+      const item = catalog.find((group) => group.code === code);
+      return item ? <button key={code} onClick={() => onOpen(code)}><Heart size={15} fill="currentColor" /><span><strong>{code}</strong>{item.title}</span><ChevronRight size={16} /></button> : null;
+    })}</div></div>}
+  </section>;
+}
+
+function RequirementRow({ label, done, detail }: { label: string; done: boolean; detail: string }) {
+  return <div className="requirement-row"><span className={done ? "check done" : "check"}>{done && <Check size={13} />}</span><span>{label}</span><strong>{detail}</strong></div>;
+}
+
+function CalendarView({ selectedItems, onBrowse, onOpen }: {
+  selectedItems: { course: Course; section: Section; selection: Selection }[];
+  onBrowse: () => void; onOpen: (code: string) => void;
+}) {
+  return <section><div className="page-heading compact"><div><p className="eyebrow">ACADEMIC YEAR 2026–27</p><h1>Course calendar</h1><p>Your exact selected classes across all five teaching modules.</p></div></div>
+    {selectedItems.length === 0 ? <div className="panel empty calendar-empty"><CalendarDays size={34} /><h3>Your calendar is empty</h3><p>Choose classes to see their schedules.</p><Button onClick={onBrowse}>Browse courses</Button></div> :
+    <div className="timeline">{[1,2,3,4,5].map((module) => {
+      const items = selectedItems.filter((item) => item.course.module === module);
+      return <div className="timeline-module" key={module}><div className="module-label"><strong>Module {module}</strong><span>{moduleDates[module]}</span></div><div className="module-events">{items.length === 0 ? <span className="no-events">No selected classes</span> : items.map(({ course, section, selection }) => <button className={"calendar-event accent-" + accentFor(course.courseCode)} key={selection.key} onClick={() => onOpen(course.courseCode)}><span>{section.timeBucket} · Class {section.sectionId}</span><strong>{course.courseCode}</strong><p>{course.courseTitle}</p><small>{section.dayPattern}</small></button>)}</div></div>;
+    })}</div>}
+  </section>;
+}
+
+function RequirementsView({ selectedItems, courses, requirements }: {
+  selectedItems: { course: Course; section: Section; selection: Selection }[];
+  courses: Course[]; requirements: Requirements | null;
+}) {
+  const selectedCodes = new Set(selectedItems.map((item) => item.course.courseCode));
+  if (!requirements) return <div className="panel empty">Loading requirements…</div>;
+  const lists = [
+    { title: "Core courses", note: "Complete all four", codes: requirements.coreCourses },
+    { title: "AI stream · List A", note: "Choose at least one for AI concentration", codes: requirements.streams.AI?.listA?.courses || [] },
+    { title: "AI stream · List B", note: "Choose at least one for AI concentration", codes: requirements.streams.AI?.listB?.courses || [] },
+    { title: "MC stream · List C", note: "Choose at least one for MC concentration", codes: requirements.streams.MC?.listC?.courses || [] },
+    { title: "MC stream · List D", note: "Choose at least one for MC concentration", codes: requirements.streams.MC?.listD?.courses || [] },
+    { title: "Capstone", note: "Choose one capstone", codes: requirements.capstoneCourses.map((item) => item.courseCode) }
+  ];
+  return <section><div className="page-heading compact"><div><p className="eyebrow">PROGRAMME STRUCTURE</p><h1>Graduation requirements</h1><p>Complete {requirements.totalCourses} courses × {requirements.creditsPerCourse} credits: four core, five electives and one capstone.</p></div></div>
+    <div className="requirements-grid">{lists.map((group) => <article className="panel rule-card" key={group.title}><div className="panel-head"><div><h2>{group.title}</h2><p>{group.note}</p></div></div>{group.codes.map((code) => {
+      const course = courses.find((item) => item.courseCode === code);
+      const capstone = requirements.capstoneCourses.find((item) => item.courseCode === code);
+      return <div className="rule-course" key={code}><span className={selectedCodes.has(code) ? "check done" : "check"}>{selectedCodes.has(code) && <Check size={13} />}</span><div><strong>{code}</strong><p>{course?.courseTitle || capstone?.courseTitle || "Approved programme course"}</p></div><span>{course ? "M" + course.module : "External"}</span></div>;
+    })}</article>)}</div>
+    <div className="disclaimer"><CircleAlert size={18} /><p><strong>Planning guidance only.</strong> Timetables and programme rules can change. Verify your final enrollment in HKU SIS and official programme communications.</p></div>
+  </section>;
 }
