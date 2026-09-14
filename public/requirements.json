@@ -1,0 +1,58 @@
+{
+  "totalCourses": 10,
+  "creditsPerCourse": 6,
+  "coreCourses": [
+    "MSBA7001",
+    "MSBA7002",
+    "MSBA7003",
+    "MSBA7004"
+  ],
+  "capstoneCourses": [
+    { "courseCode": "MSBA7005", "courseTitle": "Business Analytics Capstone" },
+    { "courseCode": "PMSC7901", "courseTitle": "Business Case Analysis Capstone" },
+    { "courseCode": "PMSC7902", "courseTitle": "Business Case Analysis Capstone (Global Centres)" }
+  ],
+  "streams": {
+    "AI": {
+      "name": "Artificial Intelligence",
+      "description": "Students who choose to concentrate in the AI stream are required to take a minimum of one course from elective List A and a minimum of one course from elective List B.",
+      "listA": {
+        "name": "AI Methods",
+        "minRequired": 1,
+        "courses": ["MSBA7013", "MSBA7021", "MSBA7027", "MSBA7028"]
+      },
+      "listB": {
+        "name": "AI Applications",
+        "minRequired": 1,
+        "courses": ["MSBA7026", "MSBA7032", "MSBA7033", "MSBA7035", "MSBA7036"]
+      }
+    },
+    "MC": {
+      "name": "Management Consulting",
+      "description": "Students who choose to concentrate in the MC stream are required to take a minimum of one course from elective List C and a minimum of one course from elective List D.",
+      "listC": {
+        "name": "Analytical Methods",
+        "minRequired": 1,
+        "courses": ["MSBA7014", "MSBA7015", "MSBA7023", "MSBA7024", "MSBA7025", "MSBA7027", "MSBA7029", "MSBA7037"]
+      },
+      "listD": {
+        "name": "Domain Expertise",
+        "minRequired": 1,
+        "courses": ["MSBA7012", "MSBA7016", "MSBA7017", "MSBA7030"]
+      }
+    }
+  },
+  "electiveCount": 5,
+  "notes": [
+    "Candidates who do not choose to concentrate in any stream can take any five elective courses offered during the academic year.",
+    "Candidates may also take up to two elective courses from the taught postgraduate curricula offered by the Faculty of Business and Economics under the advice and approval of the Programme Directors concerned.",
+    "Not all courses listed will necessarily be offered each academic year."
+  ],
+  "planningRules": [
+    "每个模块建议修读约 2 门课程（课程可用性/要求/个人计划为前提）",
+    "若申请基于成绩的奖学金，需在 Modules 1-3 至少完成 4 门课程（不论是否获课程豁免，适用情形）",
+    "共需修读 10 门课程（5 Core + 5 Elective），每门 6 学分",
+    "Core 课程包含 4 门必修 + 1 门 Capstone（三选一）",
+    "可选择在一年内完成所有要求（通过合理规划 Year 1/Year 2 课程负荷）"
+  ]
+}
