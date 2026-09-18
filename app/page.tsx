@@ -40,6 +40,18 @@ type CourseList = { name: string; minRequired: number; courses: string[] };
 type Selection = { key: string; courseCode: string; module: number; sectionId: string };
 
 const moduleDates = ["", "Sep 5 – Oct 21", "Oct 22 – Nov 30", "Dec 1 – Jan 21", "Jan 22 – Mar 10", "Mar 18 – May 4"];
+const weekDays = [
+  { day: 1, short: "MON", label: "Monday" },
+  { day: 2, short: "TUE", label: "Tuesday" },
+  { day: 3, short: "WED", label: "Wednesday" },
+  { day: 4, short: "THU", label: "Thursday" },
+  { day: 5, short: "FRI", label: "Friday" },
+  { day: 6, short: "SAT", label: "Saturday" },
+  { day: 0, short: "SUN", label: "Sunday" },
+] as const;
+const calendarStartMinutes = 8 * 60;
+const calendarEndMinutes = 22 * 60;
+const calendarHourHeight = 68;
 const nav = [
   { id: "courses", label: "Courses", icon: BookOpen },
   { id: "planner", label: "My Plan", icon: LayoutDashboard },
@@ -70,6 +82,13 @@ function examFor(course: Course, section: Section) {
 }
 function overlaps(a: Meeting, b: Meeting) {
   return a.date === b.date && a.startTime < b.endTime && b.startTime < a.endTime;
+}
+function timeToMinutes(time: string) {
+  const [hours, minutes] = time.split(":").map(Number);
+  return hours * 60 + minutes;
+}
+function meetingWeekday(date: string) {
+  return new Date(date + "T00:00:00Z").getUTCDay();
 }
 function accentFor(code: string) {
   const tones = ["blue", "cyan", "violet", "indigo", "emerald", "amber", "rose"];
@@ -377,7 +396,7 @@ function PlannerView({ selectedItems, conflicts, requirements, onBrowse, onRemov
     ].map((item) => <div className="stat-card" key={item.label}><span>{item.label}</span><strong>{item.value}<small>/{item.target}</small></strong><Progress value={Math.min(100, item.value / item.target * 100)} /></div>)}</div>
     <div className="planner-layout"><div className="panel selected-panel"><div className="panel-head"><div><h2>Selected classes</h2><p>{selectedItems.length * (requirements?.creditsPerCourse || 6)} credits · {conflicts.size} classes affected by conflicts</p></div></div>
       {selectedItems.length === 0 ? <div className="empty"><BookOpen size={30} /><h3>No classes selected yet</h3><p>Open a course and choose a specific class.</p><Button onClick={onBrowse}>Browse & choose</Button></div> :
-      selectedItems.sort((a, b) => a.course.module - b.course.module).map(({ course, section, selection }) => <div className="plan-row" key={selection.key}>
+      [...selectedItems].sort((a, b) => a.course.module - b.course.module).map(({ course, section, selection }) => <div className="plan-row" key={selection.key}>
         <span className={"course-dot bg-" + accentFor(course.courseCode)} />
         <div className="plan-info" onClick={() => onOpen(course.courseCode)} role="button"><strong>{course.courseCode}</strong><span>{course.courseTitle}</span><small>Module {course.module} · Class {section.sectionId} · {section.dayPattern}</small>{conflicts.has(selection.key) && <em><CircleAlert size={13} /> Exact-date time conflict detected</em>}</div>
         <button onClick={() => onRemove(course.courseCode)} aria-label={"Remove " + course.courseCode}><Trash2 size={17} /></button>
@@ -404,12 +423,83 @@ function CalendarView({ selectedItems, onBrowse, onOpen }: {
   selectedItems: { course: Course; section: Section; selection: Selection }[];
   onBrowse: () => void; onOpen: (code: string) => void;
 }) {
-  return <section><div className="page-heading compact"><div><p className="eyebrow">ACADEMIC YEAR 2026–27</p><h1>Course calendar</h1><p>Your exact selected classes across all five teaching modules.</p></div></div>
-    {selectedItems.length === 0 ? <div className="panel empty calendar-empty"><CalendarDays size={34} /><h3>Your calendar is empty</h3><p>Choose classes to see their schedules.</p><Button onClick={onBrowse}>Browse courses</Button></div> :
-    <div className="timeline">{[1,2,3,4,5].map((module) => {
-      const items = selectedItems.filter((item) => item.course.module === module);
-      return <div className="timeline-module" key={module}><div className="module-label"><strong>Module {module}</strong><span>{moduleDates[module]}</span></div><div className="module-events">{items.length === 0 ? <span className="no-events">No selected classes</span> : items.map(({ course, section, selection }) => <button className={"calendar-event accent-" + accentFor(course.courseCode)} key={selection.key} onClick={() => onOpen(course.courseCode)}><span>{section.timeBucket} · Class {section.sectionId}</span><strong>{course.courseCode}</strong><p>{course.courseTitle}</p><small>{section.dayPattern}</small></button>)}</div></div>;
-    })}</div>}
+  const [activeModule, setActiveModule] = useState(() => selectedItems[0]?.course.module || 1);
+  const moduleItems = selectedItems.filter((item) => item.course.module === activeModule);
+  const moduleCounts = new Map<number, number>();
+  selectedItems.forEach((item) => moduleCounts.set(item.course.module, (moduleCounts.get(item.course.module) || 0) + 1));
+
+  const events = moduleItems.flatMap(({ course, section, selection }) => {
+    const uniqueMeetings = new Map<string, Meeting>();
+    section.meetings.forEach((meeting) => {
+      const day = meetingWeekday(meeting.date);
+      const key = [meeting.sessionType, day, meeting.startTime, meeting.endTime].join("|");
+      if (!uniqueMeetings.has(key)) uniqueMeetings.set(key, meeting);
+    });
+    return Array.from(uniqueMeetings.values()).map((meeting) => ({
+      id: selection.key + "|" + meeting.sessionType + "|" + meetingWeekday(meeting.date) + "|" + meeting.startTime,
+      course,
+      section,
+      meeting,
+      day: meetingWeekday(meeting.date),
+      start: timeToMinutes(meeting.startTime),
+      end: timeToMinutes(meeting.endTime),
+    }));
+  });
+
+  const positionedEvents = events.map((event) => {
+    const overlapping = events
+      .filter((candidate) => candidate.day === event.day && candidate.start < event.end && event.start < candidate.end)
+      .sort((a, b) => a.start - b.start || a.end - b.end || a.id.localeCompare(b.id));
+    return { ...event, lane: overlapping.findIndex((candidate) => candidate.id === event.id), laneCount: overlapping.length };
+  });
+  const hourMarks = Array.from(
+    { length: (calendarEndMinutes - calendarStartMinutes) / 60 + 1 },
+    (_, index) => calendarStartMinutes / 60 + index
+  );
+  const calendarHeight = ((calendarEndMinutes - calendarStartMinutes) / 60) * calendarHourHeight;
+
+  return <section>
+    <div className="page-heading compact"><div><p className="eyebrow">ACADEMIC YEAR 2026–27</p><h1>Weekly calendar</h1><p>Monday to Sunday across a full teaching day. Switch modules to see where every selected class lands.</p></div></div>
+    {selectedItems.length === 0 ? <div className="panel empty calendar-empty"><CalendarDays size={34} /><h3>Your calendar is empty</h3><p>Choose classes to place them on the weekly timetable.</p><Button onClick={onBrowse}>Browse courses</Button></div> : <>
+      <div className="calendar-toolbar" aria-label="Choose teaching module">
+        <div className="calendar-module-tabs">{[1,2,3,4,5].map((module) => <button key={module} className={activeModule === module ? "calendar-module active" : "calendar-module"} onClick={() => setActiveModule(module)}>
+          <span>Module {module}</span><small>{moduleCounts.get(module) || 0} selected</small>
+        </button>)}</div>
+        <div className="calendar-module-period"><CalendarDays size={16} /><span>{moduleDates[activeModule]}</span></div>
+      </div>
+
+      <div className="calendar-key"><span><i className="key-dot lecture" /> Lecture</span><span><i className="key-dot tutorial" /> Tutorial</span><span>Click a card for full dates and venues</span></div>
+      <div className="week-calendar-shell">
+        <div className="week-calendar" style={{ "--calendar-height": calendarHeight + "px", "--hour-height": calendarHourHeight + "px" } as React.CSSProperties}>
+          <div className="week-calendar-header"><div className="week-time-heading">TIME</div>{weekDays.map((item) => <div className={item.day === 0 || item.day === 6 ? "week-day-heading weekend" : "week-day-heading"} key={item.day}><span>{item.short}</span><strong>{item.label}</strong></div>)}</div>
+          <div className="week-calendar-body">
+            <div className="week-time-axis">{hourMarks.map((hour) => <span key={hour} style={{ top: (hour - calendarStartMinutes / 60) * calendarHourHeight }}>{String(hour).padStart(2, "0")}:00</span>)}</div>
+            {weekDays.map((weekday) => <div className={weekday.day === 0 || weekday.day === 6 ? "week-day-column weekend" : "week-day-column"} key={weekday.day}>
+              {positionedEvents.filter((event) => event.day === weekday.day).map((event) => {
+                const top = ((event.start - calendarStartMinutes) / 60) * calendarHourHeight;
+                const height = Math.max(48, ((event.end - event.start) / 60) * calendarHourHeight);
+                const width = 100 / event.laneCount;
+                return <button
+                  className={"week-course-card accent-" + accentFor(event.course.courseCode) + (event.meeting.sessionType === "tutorial" ? " tutorial" : "")}
+                  style={{ top, height, left: "calc(" + width * event.lane + "% + 4px)", width: "calc(" + width + "% - 8px)" }}
+                  key={event.id}
+                  onClick={() => onOpen(event.course.courseCode)}
+                  aria-label={event.course.courseCode + " Class " + event.section.sectionId + ", " + event.meeting.startTime + " to " + event.meeting.endTime}
+                >
+                  <span className="week-course-time">{event.meeting.startTime}–{event.meeting.endTime}</span>
+                  <strong>{event.course.courseCode}</strong>
+                  <span className="week-course-title">{event.course.courseTitle}</span>
+                  <span className="week-course-meta">Class {event.section.sectionId} · {event.meeting.sessionType === "lecture" ? "LEC" : "TUT"}</span>
+                  <span className="week-course-venue">{event.meeting.venue}</span>
+                </button>;
+              })}
+            </div>)}
+            {moduleItems.length === 0 && <div className="week-calendar-empty"><CalendarDays size={25} /><strong>No classes selected in Module {activeModule}</strong><span>Choose another module or add a course.</span></div>}
+          </div>
+        </div>
+      </div>
+      <p className="calendar-note">The grid groups recurring class times by weekday. Open a course card to verify individual teaching dates, holidays, tutorials and assessment arrangements.</p>
+    </>}
   </section>;
 }
 
