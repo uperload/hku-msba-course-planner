@@ -1,14 +1,15 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   BookOpen, CalendarDays, Check, ChevronRight, CircleAlert, Clock3,
-  ExternalLink, GraduationCap, Heart, LayoutDashboard, Menu, Search,
+  ExternalLink, GraduationCap, Heart, LayoutDashboard, Mail, Menu, Search,
   Sparkles, Trash2, Users, X
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
+import { CourseEmails } from "@/components/course-emails";
 
 type Instructor = { name: string; note?: string };
 type Meeting = {
@@ -56,6 +57,7 @@ const nav = [
   { id: "courses", label: "Courses", icon: BookOpen },
   { id: "planner", label: "My Plan", icon: LayoutDashboard },
   { id: "calendar", label: "Calendar", icon: CalendarDays },
+  { id: "emails", label: "Course Emails", icon: Mail },
   { id: "requirements", label: "Requirements", icon: GraduationCap },
 ] as const;
 type Tab = (typeof nav)[number]["id"];
@@ -119,6 +121,10 @@ export default function Home() {
   const [notice, setNotice] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [hydrated, setHydrated] = useState(false);
+  const showNotice = useCallback((message: string) => {
+    setNotice(message);
+    window.setTimeout(() => setNotice(null), 2400);
+  }, []);
 
   useEffect(() => {
     Promise.all([
@@ -144,6 +150,17 @@ export default function Home() {
   useEffect(() => {
     if (hydrated) localStorage.setItem("hku-ba-plan-v2", JSON.stringify({ selected, wishlist }));
   }, [selected, wishlist, hydrated]);
+
+  useEffect(() => {
+    const outlookResult = new URLSearchParams(window.location.search).get("outlook");
+    if (!outlookResult) return;
+    setTab("emails");
+    if (outlookResult === "connected") showNotice("Outlook connected securely");
+    if (outlookResult === "failed") showNotice("Outlook connection failed. Please try again.");
+    if (outlookResult === "invalid-state") showNotice("Outlook sign-in expired. Please try again.");
+    if (outlookResult === "not-configured") showNotice("Outlook integration is not configured yet.");
+    window.history.replaceState({}, "", window.location.pathname);
+  }, [showNotice]);
 
   const catalog = useMemo(() => {
     const groups = new Map<string, Course[]>();
@@ -187,10 +204,6 @@ export default function Home() {
       && (typeFilter === "all" || group.type === typeFilter);
   });
 
-  const showNotice = (message: string) => {
-    setNotice(message);
-    window.setTimeout(() => setNotice(null), 2400);
-  };
   const chooseSection = (course: Course, section: Section) => {
     const key = selectionKey(course, section);
     if (selected[course.courseCode]?.key === key) {
@@ -251,6 +264,19 @@ export default function Home() {
       inputSchema: { type: "object", properties: {}, additionalProperties: false },
       annotations: { readOnlyHint: true, untrustedContentHint: false },
       execute: () => ({ selected: Object.values(selected) })
+    }, { signal: lifecycle.signal })).catch(() => undefined);
+    void Promise.resolve(context.registerTool({
+      name: "read_course_emails",
+      title: "Read Moodle course emails",
+      description: "Read messages sent by moodle@info.hku.hk from the connected Outlook account. Returns subjects, previews, dates, course codes and Outlook links.",
+      inputSchema: { type: "object", properties: {}, additionalProperties: false },
+      annotations: { readOnlyHint: true, untrustedContentHint: true },
+      execute: async () => {
+        const response = await fetch("/api/outlook/messages", { cache: "no-store" });
+        const result = await response.json();
+        if (!response.ok) return { connected: false, ...result };
+        return { connected: true, ...result };
+      }
     }, { signal: lifecycle.signal })).catch(() => undefined);
     return () => lifecycle.abort();
   }, [courses, selected]);
@@ -319,6 +345,7 @@ export default function Home() {
       }} onOpen={setActiveCode} completion={completion} coreCount={coreCount} electiveCount={electiveCount} capstoneCount={capstoneCount} wishlist={wishlist} catalog={catalog} />}
 
       {tab === "calendar" && <CalendarView selectedItems={selectedItems} onBrowse={() => setTab("courses")} onOpen={setActiveCode} />}
+      {tab === "emails" && <CourseEmails />}
       {tab === "requirements" && <RequirementsView selectedItems={selectedItems} courses={courses} requirements={requirements} />}
     </main>
 
