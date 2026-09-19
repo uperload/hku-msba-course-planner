@@ -9,22 +9,18 @@ A responsive, unofficial course-planning tool for HKU MSc in Business Analytics 
 - Detect timetable conflicts within each teaching module
 - Track core, elective, capstone, and AI-stream requirements
 - View a module-based course calendar
-- Connect Outlook and surface Moodle notices from `moodle@info.hku.hk`
+- Forward and surface Moodle notices from `moodle@info.hku.hk`
 - Responsive desktop and mobile experience
 
-## Outlook course emails
+## Course emails
 
-The **Course Emails** area uses delegated Microsoft Graph access. Users sign in on Microsoft's page, and the app requests read-only `Mail.Read` access. Access and refresh tokens are encrypted in `HttpOnly` cookies and are never exposed to client-side JavaScript.
+The **Course Emails** area uses a Resend inbound address because HKU accounts may not permit third-party Microsoft Entra app registration. An Outlook rule forwards matching messages to Resend, the server verifies the original sender, and accepted mail is stored in Neon. The API is protected with a private access key.
 
-1. Create a Microsoft Entra app registration for organizational accounts.
-2. Add the Web redirect URIs:
-   - `http://localhost:3000/api/outlook/callback`
-   - `https://hku-msba-course-planner.vercel.app/api/outlook/callback`
-3. Add the delegated Microsoft Graph permissions `User.Read` and `Mail.Read`.
-4. Copy `.env.example` to `.env.local` and add the client ID, client secret, and a random session secret.
-5. Add the same variables to the Vercel project for production.
-
-Set `MICROSOFT_TENANT_ID` to HKU's tenant ID if sign-in should be restricted to HKU accounts. Otherwise, the default `organizations` value allows any Microsoft work or school account.
+1. Create a Resend API key and note the default Resend inbound address.
+2. Provision a Neon database and copy `.env.example` to `.env.local`.
+3. Add the Resend key, Neon URL, inbound address, and a random course-email access key.
+4. In Outlook, create a rule: sender is `moodle@info.hku.hk` → forward to the Resend inbound address.
+5. Optional: register `/api/course-emails/inbound` for Resend's `email.received` webhook and add its signing secret. Without a webhook, the app still imports messages whenever the inbox is refreshed.
 
 ## Run locally
 

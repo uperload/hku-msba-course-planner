@@ -1,58 +1,59 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
-import {
-  ExternalLink,
-  Inbox,
-  LoaderCircle,
-  LogOut,
-  Mail,
-  RefreshCw,
-  ShieldCheck,
-} from "lucide-react";
+import { FormEvent, useCallback, useEffect, useState } from "react";
+import { Inbox, KeyRound, LoaderCircle, Lock, Mail, RefreshCw, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
-type OutlookStatus = {
+const ACCESS_KEY_STORAGE = "hku-course-email-access-v1";
+
+type CourseEmailStatus = {
   configured: boolean;
-  connected: boolean;
-  account?: { name: string; email: string } | null;
+  protected: boolean;
+  inboxAddress: string | null;
+  webhookConfigured: boolean;
 };
 
 export type CourseEmail = {
   id: string;
   subject: string;
+  sender: string;
   receivedAt: string;
   preview: string;
-  webLink: string | null;
-  isRead: boolean;
+  content: string;
   courseCodes: string[];
 };
 
 type MessagesResponse = {
-  account: { name: string; email: string };
   source: string;
   fetchedAt: string;
   messages: CourseEmail[];
 };
 
 export function CourseEmails() {
-  const [status, setStatus] = useState<OutlookStatus | null>(null);
+  const [status, setStatus] = useState<CourseEmailStatus | null>(null);
+  const [accessKey, setAccessKey] = useState("");
+  const [keyInput, setKeyInput] = useState("");
   const [data, setData] = useState<MessagesResponse | null>(null);
   const [loadingMessages, setLoadingMessages] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const loadMessages = useCallback(async (signal?: AbortSignal) => {
+  const loadMessages = useCallback(async (key: string, signal?: AbortSignal) => {
     setLoadingMessages(true);
     setError(null);
     try {
-      const response = await fetch("/api/outlook/messages", { cache: "no-store", signal });
-      const payload = await response.json() as MessagesResponse & { error?: string; reconnect?: boolean };
+      const response = await fetch("/api/course-emails/messages", {
+        cache: "no-store",
+        signal,
+        headers: { authorization: `Bearer ${key}` },
+      });
+      const payload = await response.json() as MessagesResponse & { error?: string };
       if (!response.ok) {
-        if (payload.reconnect) {
-          setStatus((current) => ({ configured: current?.configured ?? true, connected: false }));
-        }
-        throw new Error(payload.error || "Could not load course emails");
+        if (response.status === 401) localStorage.removeItem(ACCESS_KEY_STORAGE);
+        throw new Error(response.status === 401 ? "Access key is incorrect" : payload.error || "Could not load course emails");
       }
+      localStorage.setItem(ACCESS_KEY_STORAGE, key);
+      setAccessKey(key);
       setData(payload);
     } catch (reason) {
       if (reason instanceof DOMException && reason.name === "AbortError") return;
@@ -64,93 +65,98 @@ export function CourseEmails() {
 
   useEffect(() => {
     const controller = new AbortController();
-    void fetch("/api/outlook/status", { cache: "no-store", signal: controller.signal })
+    const savedKey = localStorage.getItem(ACCESS_KEY_STORAGE) || "";
+    setAccessKey(savedKey);
+    void fetch("/api/course-emails/status", { cache: "no-store", signal: controller.signal })
       .then(async (response) => {
-        if (!response.ok) throw new Error("Could not check Outlook connection");
-        const nextStatus = await response.json() as OutlookStatus;
+        if (!response.ok) throw new Error("Could not check course email setup");
+        const nextStatus = await response.json() as CourseEmailStatus;
         setStatus(nextStatus);
-        if (nextStatus.connected) await loadMessages(controller.signal);
+        if (nextStatus.configured && savedKey) await loadMessages(savedKey, controller.signal);
       })
       .catch((reason: unknown) => {
         if (reason instanceof DOMException && reason.name === "AbortError") return;
-        setError(reason instanceof Error ? reason.message : "Could not check Outlook connection");
-        setStatus({ configured: true, connected: false });
+        setError(reason instanceof Error ? reason.message : "Could not check course email setup");
       });
     return () => controller.abort();
   }, [loadMessages]);
 
   useEffect(() => {
-    if (!status?.connected) return;
-    const interval = window.setInterval(() => void loadMessages(), 60_000);
+    if (!accessKey || !data) return;
+    const interval = window.setInterval(() => void loadMessages(accessKey), 60_000);
     return () => window.clearInterval(interval);
-  }, [loadMessages, status?.connected]);
+  }, [accessKey, data, loadMessages]);
 
-  const disconnect = async () => {
+  const unlock = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const nextKey = keyInput.trim();
+    if (nextKey) void loadMessages(nextKey);
+  };
+
+  const lock = () => {
+    localStorage.removeItem(ACCESS_KEY_STORAGE);
+    setAccessKey("");
+    setKeyInput("");
+    setData(null);
     setError(null);
-    try {
-      const response = await fetch("/api/outlook/disconnect", { method: "POST" });
-      if (!response.ok) throw new Error("Could not disconnect Outlook");
-      setData(null);
-      setStatus((current) => ({ configured: current?.configured ?? true, connected: false }));
-    } catch {
-      setError("Could not disconnect Outlook");
-    }
   };
 
   if (!status) {
-    return <EmailPageHeading><div className="email-state"><LoaderCircle className="spin" /><span>Checking Outlook connection…</span></div></EmailPageHeading>;
+    return <EmailPageHeading><div className="email-state"><LoaderCircle className="spin" /><span>Checking the course inbox…</span></div></EmailPageHeading>;
   }
 
-  if (!status.configured) {
+  if (!status.configured || !status.protected) {
     return <EmailPageHeading>
       <div className="email-connect-card">
         <div className="email-connect-icon"><Mail size={28} /></div>
-        <div><h2>Outlook setup is required</h2><p>Add the Microsoft Entra credentials described in the project README, then redeploy the app.</p></div>
+        <div><h2>Course inbox setup is incomplete</h2><p>The server still needs Resend, Neon, and a private access key. No mailbox credentials are stored in your browser.</p></div>
       </div>
     </EmailPageHeading>;
   }
 
-  if (!status.connected) {
+  if (!accessKey || (!data && error?.includes("incorrect"))) {
     return <EmailPageHeading>
       <div className="email-connect-card">
-        <div className="email-connect-icon"><Mail size={28} /></div>
+        <div className="email-connect-icon"><KeyRound size={28} /></div>
         <div>
-          <h2>Connect your Outlook inbox</h2>
-          <p>Sign in with your Outlook account to collect course notices sent by <strong>moodle@info.hku.hk</strong>.</p>
-          <div className="email-permission"><ShieldCheck size={16} /><span>Read-only access. The planner cannot send, edit, or delete your mail.</span></div>
-          <Button asChild className="outlook-connect"><a href="/api/outlook/connect">Connect Outlook</a></Button>
+          <h2>Unlock your private course inbox</h2>
+          <p>Enter the private access key once on this device. It stays in this browser and protects your forwarded email from other visitors.</p>
+          <form className="email-unlock" onSubmit={unlock}>
+            <Input type="password" value={keyInput} onChange={(event) => setKeyInput(event.target.value)} autoComplete="current-password" placeholder="Course email access key" aria-label="Course email access key" />
+            <Button type="submit" disabled={!keyInput.trim() || loadingMessages}>{loadingMessages ? <LoaderCircle className="spin" /> : <Lock />}Unlock</Button>
+          </form>
+          {error ? <p className="email-error" role="alert">{error}</p> : null}
         </div>
       </div>
-      {error ? <p className="email-error" role="alert">{error}</p> : null}
     </EmailPageHeading>;
   }
 
   const messages = data?.messages || [];
   return <EmailPageHeading>
     <div className="email-account-bar">
-      <div><span className="account-dot" /><div><strong>{status.account?.name || data?.account.name}</strong><small>{status.account?.email || data?.account.email}</small></div></div>
+      <div><span className="account-dot" /><div><strong>Private course inbox</strong><small>{status.inboxAddress || "Resend inbound address pending"}</small></div></div>
       <div className="email-account-actions">
-        <Button variant="outline" onClick={() => void loadMessages()} disabled={loadingMessages}><RefreshCw className={loadingMessages ? "spin" : ""} />Refresh</Button>
-        <Button variant="ghost" onClick={() => void disconnect()}><LogOut />Disconnect</Button>
+        <Button variant="outline" onClick={() => void loadMessages(accessKey)} disabled={loadingMessages}><RefreshCw className={loadingMessages ? "spin" : ""} />Refresh</Button>
+        <Button variant="ghost" onClick={lock}><Lock />Lock</Button>
       </div>
     </div>
 
+    {!status.inboxAddress ? <div className="email-setup-note"><Mail size={17} /><span>Add your Resend inbound address to <strong>RESEND_INBOUND_ADDRESS</strong>, then create an Outlook rule forwarding messages from <strong>moodle@info.hku.hk</strong> to it.</span></div> : <div className="email-setup-note"><Mail size={17} /><span>Outlook rule: forward mail from <strong>moodle@info.hku.hk</strong> to <strong>{status.inboxAddress}</strong>.</span></div>}
     {error ? <p className="email-error" role="alert">{error}</p> : null}
-    <div className="email-source-note"><ShieldCheck size={17} /><span>Only messages whose sender exactly matches <strong>moodle@info.hku.hk</strong> are shown here.</span></div>
+    <div className="email-source-note"><ShieldCheck size={17} /><span>Only mail that contains verifiable sender evidence for <strong>moodle@info.hku.hk</strong> is stored and shown.</span></div>
 
-    {loadingMessages && !data ? <div className="panel email-state"><LoaderCircle className="spin" /><span>Looking for course emails…</span></div> : null}
-    {!loadingMessages && data && messages.length === 0 ? <div className="panel email-empty"><Inbox size={34} /><h2>No course emails found</h2><p>Messages from Moodle will appear here automatically when you refresh.</p></div> : null}
+    {loadingMessages && !data ? <div className="panel email-state"><LoaderCircle className="spin" /><span>Syncing the course inbox…</span></div> : null}
+    {!loadingMessages && data && messages.length === 0 ? <div className="panel email-empty"><Inbox size={34} /><h2>No course emails yet</h2><p>Create the Outlook forwarding rule, then new Moodle messages will appear here automatically.</p></div> : null}
     {messages.length > 0 ? <div className="email-list" aria-live="polite">
       <div className="email-list-head"><span>{messages.length} course {messages.length === 1 ? "email" : "emails"}</span><small>Newest first</small></div>
-      {messages.map((message) => <article className={message.isRead ? "email-row" : "email-row unread"} key={message.id}>
-        <div className="email-status-dot" role="img" aria-label={message.isRead ? "Read" : "Unread"} />
+      {messages.map((message) => <article className="email-row" key={message.id}>
+        <div className="email-status-dot" aria-hidden="true" />
         <div className="email-content">
           <div className="email-meta"><span>MOODLE</span><time dateTime={message.receivedAt}>{formatEmailDate(message.receivedAt)}</time></div>
           <h2>{message.subject}</h2>
           {message.courseCodes.length > 0 ? <div className="email-course-tags">{message.courseCodes.map((code) => <span key={code}>{code}</span>)}</div> : null}
-          <p>{message.preview}</p>
+          <p>{message.preview || "No text preview available"}</p>
         </div>
-        {message.webLink ? <a className="email-open" href={message.webLink} target="_blank" rel="noreferrer" aria-label={`Open ${message.subject} in Outlook`}><ExternalLink size={17} /></a> : null}
       </article>)}
     </div> : null}
   </EmailPageHeading>;
@@ -159,7 +165,7 @@ export function CourseEmails() {
 function EmailPageHeading({ children }: { children: React.ReactNode }) {
   return <section>
     <div className="page-heading compact email-heading">
-      <div><p className="eyebrow">OUTLOOK · MOODLE NOTICES</p><h1>Course Emails</h1><p>Important Moodle messages, separated from the noise and ready for the assistant to use.</p></div>
+      <div><p className="eyebrow">RESEND · MOODLE NOTICES</p><h1>Course Emails</h1><p>Forward important Moodle messages here so the planner and assistant can use them.</p></div>
     </div>
     {children}
   </section>;
@@ -168,8 +174,5 @@ function EmailPageHeading({ children }: { children: React.ReactNode }) {
 function formatEmailDate(value: string) {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return value;
-  return new Intl.DateTimeFormat("en-HK", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(date);
+  return new Intl.DateTimeFormat("en-HK", { dateStyle: "medium", timeStyle: "short" }).format(date);
 }

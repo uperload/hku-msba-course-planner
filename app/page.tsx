@@ -151,17 +151,6 @@ export default function Home() {
     if (hydrated) localStorage.setItem("hku-ba-plan-v2", JSON.stringify({ selected, wishlist }));
   }, [selected, wishlist, hydrated]);
 
-  useEffect(() => {
-    const outlookResult = new URLSearchParams(window.location.search).get("outlook");
-    if (!outlookResult) return;
-    setTab("emails");
-    if (outlookResult === "connected") showNotice("Outlook connected securely");
-    if (outlookResult === "failed") showNotice("Outlook connection failed. Please try again.");
-    if (outlookResult === "invalid-state") showNotice("Outlook sign-in expired. Please try again.");
-    if (outlookResult === "not-configured") showNotice("Outlook integration is not configured yet.");
-    window.history.replaceState({}, "", window.location.pathname);
-  }, [showNotice]);
-
   const catalog = useMemo(() => {
     const groups = new Map<string, Course[]>();
     courses.forEach((course) => groups.set(course.courseCode, [...(groups.get(course.courseCode) || []), course]));
@@ -268,11 +257,16 @@ export default function Home() {
     void Promise.resolve(context.registerTool({
       name: "read_course_emails",
       title: "Read Moodle course emails",
-      description: "Read messages sent by moodle@info.hku.hk from the connected Outlook account. Returns subjects, previews, dates, course codes and Outlook links.",
+      description: "Read Moodle messages forwarded into the private course inbox. Returns subjects, content, dates and detected course codes.",
       inputSchema: { type: "object", properties: {}, additionalProperties: false },
       annotations: { readOnlyHint: true, untrustedContentHint: true },
       execute: async () => {
-        const response = await fetch("/api/outlook/messages", { cache: "no-store" });
+        const accessKey = localStorage.getItem("hku-course-email-access-v1");
+        if (!accessKey) return { connected: false, error: "Course email inbox is locked. Open Course Emails and enter the private access key." };
+        const response = await fetch("/api/course-emails/messages", {
+          cache: "no-store",
+          headers: { authorization: `Bearer ${accessKey}` },
+        });
         const result = await response.json();
         if (!response.ok) return { connected: false, ...result };
         return { connected: true, ...result };
